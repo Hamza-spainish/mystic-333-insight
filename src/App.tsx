@@ -30,16 +30,7 @@ const App = () => (
         <main>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/angel-number-111" element={<BlogPostPage />} />
-            <Route path="/angel-number-222" element={<BlogPostPage />} />
-            <Route path="/angel-number-444" element={<BlogPostPage />} />
-            <Route path="/angel-number-555" element={<BlogPostPage />} />
-            <Route path="/angel-number-777" element={<BlogPostPage />} />
-            <Route path="/angel-number-888" element={<BlogPostPage />} />
-            <Route path="/angel-number-999" element={<BlogPostPage />} />
-            <Route path="/333-meaning-after-breakup" element={<BlogPostPage />} />
-            <Route path="/333-meaning-in-career" element={<BlogPostPage />} />
-            <Route path="/angel-numbers-manifestation-guide" element={<BlogPostPage />} />
+            <Route path="/:slug" element={<BlogPostPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="/disclaimer" element={<Disclaimer />} />

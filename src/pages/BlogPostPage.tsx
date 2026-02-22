@@ -4,6 +4,53 @@ import { ArrowLeft, ChevronRight } from "lucide-react";
 import { getPostBySlug } from "@/data/blogPosts";
 import AuthorBox from "@/components/AuthorBox";
 import AdPlaceholder from "@/components/AdPlaceholder";
+import NewsletterSection from "@/components/NewsletterSection";
+import type { BlogSection, TableData } from "@/data/blogPosts";
+
+const RenderTable = ({ table }: { table: TableData }) => (
+  <div className="my-6 overflow-x-auto">
+    {table.caption && <p className="text-sm font-medium text-foreground mb-2">{table.caption}</p>}
+    <table className="w-full border-collapse text-sm">
+      <thead>
+        <tr className="bg-primary/10">
+          {table.headers.map((h, i) => (
+            <th key={i} className="border border-border px-3 py-2 text-left font-serif font-semibold text-foreground">{h}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {table.rows.map((row, i) => (
+          <tr key={i} className={i % 2 === 0 ? "bg-card" : "bg-secondary/30"}>
+            {row.map((cell, j) => (
+              <td key={j} className="border border-border px-3 py-2 text-muted-foreground">{cell}</td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+);
+
+const RenderSection = ({ section, index }: { section: BlogSection; index: number }) => (
+  <section id={`section-${index}`} className="mb-10">
+    {section.level === "h2" ? (
+      <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">{section.heading}</h2>
+    ) : (
+      <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{section.heading}</h3>
+    )}
+    {section.paragraphs.map((p, j) => (
+      <p key={j} className="text-muted-foreground leading-relaxed mb-4">{p}</p>
+    ))}
+    {section.bulletPoints && (
+      <ul className="list-disc pl-6 space-y-2 mb-6">
+        {section.bulletPoints.map((bp, j) => (
+          <li key={j} className="text-muted-foreground leading-relaxed text-sm">{bp}</li>
+        ))}
+      </ul>
+    )}
+    {section.table && <RenderTable table={section.table} />}
+  </section>
+);
 
 const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -20,6 +67,47 @@ const BlogPostPage = () => {
     );
   }
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://theangelnumber333.com/" },
+      { "@type": "ListItem", "position": 2, "name": post.title.split(":")[0], "item": `https://theangelnumber333.com/${post.slug}` },
+    ],
+  };
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.metaDescription,
+    "author": { "@type": "Person", "name": "Daniel Carter", "jobTitle": "Spiritual Numerology Expert" },
+    "publisher": { "@type": "Organization", "name": "Angel Number 333 Meaning", "url": "https://theangelnumber333.com" },
+    "datePublished": post.datePublished,
+    "dateModified": post.dateModified,
+    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://theangelnumber333.com/${post.slug}` },
+    "url": `https://theangelnumber333.com/${post.slug}`,
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": post.faqs.map(f => ({
+      "@type": "Question",
+      "name": f.question,
+      "acceptedAnswer": { "@type": "Answer", "text": f.answer },
+    })),
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": post.metaTitle,
+    "description": post.metaDescription,
+    "url": `https://theangelnumber333.com/${post.slug}`,
+    "isPartOf": { "@type": "WebSite", "name": "Angel Number 333 Meaning", "url": "https://theangelnumber333.com" },
+  };
+
   return (
     <>
       <Helmet>
@@ -28,24 +116,22 @@ const BlogPostPage = () => {
         <link rel="canonical" href={`https://theangelnumber333.com/${post.slug}`} />
         <meta property="og:title" content={post.metaTitle} />
         <meta property="og:description" content={post.metaDescription} />
+        <meta property="og:url" content={`https://theangelnumber333.com/${post.slug}`} />
         <meta property="og:type" content="article" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": post.faqs.map(f => ({
-              "@type": "Question",
-              "name": f.question,
-              "acceptedAnswer": { "@type": "Answer", "text": f.answer }
-            }))
-          })}
-        </script>
+        <meta property="og:site_name" content="Angel Number 333 Meaning" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.metaTitle} />
+        <meta name="twitter:description" content={post.metaDescription} />
+        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
       </Helmet>
 
       <article className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-1 text-sm text-muted-foreground mb-6 max-w-3xl mx-auto">
+          <nav className="flex items-center gap-1 text-sm text-muted-foreground mb-6 max-w-3xl mx-auto flex-wrap">
             <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <span className="text-foreground">{post.title.split(":")[0]}</span>
@@ -56,41 +142,49 @@ const BlogPostPage = () => {
               <ArrowLeft className="h-3.5 w-3.5" /> Back to Angel Number 333
             </Link>
 
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">{post.title}</h1>
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">{post.title}</h1>
+            
+            <div className="flex items-center gap-3 text-sm text-muted-foreground mb-8">
+              <span>By Daniel Carter</span>
+              <span>•</span>
+              <time dateTime={post.dateModified}>Updated {new Date(post.dateModified).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</time>
+            </div>
+
+            {/* Quick Reference Table */}
+            {post.tableData && <RenderTable table={post.tableData} />}
 
             {/* TOC */}
             <nav className="bg-secondary/50 rounded-xl p-5 mb-10 border border-border">
               <p className="font-serif font-semibold text-foreground mb-3">📖 In This Article</p>
               <ul className="space-y-1.5">
                 {post.content.map((s, i) => (
-                  <li key={i}>
+                  <li key={i} className={s.level === "h3" ? "pl-4" : ""}>
                     <a href={`#section-${i}`} className="text-sm text-primary hover:underline">
-                      {s.heading}
+                      {s.level === "h3" ? "↳ " : ""}{s.heading}
                     </a>
                   </li>
                 ))}
-                <li><a href="#blog-faqs" className="text-sm text-primary hover:underline">FAQs</a></li>
+                <li>
+                  <a href="#blog-faqs" className="text-sm text-primary hover:underline">Frequently Asked Questions</a>
+                </li>
               </ul>
             </nav>
 
+            <AdPlaceholder slot="blog-top" />
+
             {/* Content */}
             {post.content.map((section, i) => (
-              <section key={i} id={`section-${i}`} className="mb-10">
-                {section.level === "h2" ? (
-                  <h2 className="font-serif text-2xl font-bold text-foreground mb-4">{section.heading}</h2>
-                ) : (
-                  <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{section.heading}</h3>
-                )}
-                {section.content.split("\n\n").map((p, j) => (
-                  <p key={j} className="text-muted-foreground leading-relaxed mb-4">{p}</p>
-                ))}
-                {i === 2 && <AdPlaceholder slot="blog-mid" />}
-              </section>
+              <div key={i}>
+                <RenderSection section={section} index={i} />
+                {i === 2 && <AdPlaceholder slot="blog-mid-1" />}
+                {i === 5 && <AdPlaceholder slot="blog-mid-2" />}
+                {i === Math.floor(post.content.length * 0.8) && i > 5 && <AdPlaceholder slot="blog-mid-3" />}
+              </div>
             ))}
 
             {/* FAQs */}
             <section id="blog-faqs" className="mb-10">
-              <h2 className="font-serif text-2xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
               <div className="space-y-3">
                 {post.faqs.map((faq, i) => (
                   <details key={i} className="group bg-card rounded-lg border border-border p-4">
@@ -104,7 +198,7 @@ const BlogPostPage = () => {
               </div>
             </section>
 
-            {/* CTA */}
+            {/* Internal linking CTA */}
             <div className="text-center p-8 bg-gradient-spiritual rounded-2xl shadow-spiritual mb-10">
               <h2 className="font-serif text-xl font-bold text-primary-foreground mb-2">
                 Discover the Full Meaning of Angel Number 333
@@ -120,10 +214,30 @@ const BlogPostPage = () => {
               </Link>
             </div>
 
+            {/* Related posts */}
+            <div className="mb-10">
+              <h2 className="font-serif text-xl font-bold text-foreground mb-4">Related Angel Number Guides</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  { slug: "angel-number-111", label: "Angel Number 111" },
+                  { slug: "angel-number-222", label: "Angel Number 222" },
+                  { slug: "angel-number-444", label: "Angel Number 444" },
+                  { slug: "angel-number-555", label: "Angel Number 555" },
+                  { slug: "angel-number-777", label: "Angel Number 777" },
+                  { slug: "angel-number-888", label: "Angel Number 888" },
+                ].filter(p => p.slug !== slug).slice(0, 4).map(p => (
+                  <Link key={p.slug} to={`/${p.slug}`} className="block p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all text-sm text-primary font-medium hover:underline">
+                    → {p.label} Meaning
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             <AuthorBox />
           </div>
         </div>
       </article>
+      <NewsletterSection />
     </>
   );
 };
