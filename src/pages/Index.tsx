@@ -281,7 +281,7 @@ const Index = () => {
       <nav id="content" className="py-8 bg-secondary/30 border-y border-border">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-xl font-bold text-foreground mb-4">📖 Table of Contents</h2>
+            <h2 className="font-serif text-xl font-bold text-foreground mb-4 heading-decorated heading-decorated-center">📖 Table of Contents</h2>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {homepageSections.map((s, i) => (
                 <li key={s.id}>
@@ -311,10 +311,15 @@ const Index = () => {
           <div className="max-w-3xl mx-auto">
             {homepageSections.map((section, i) => (
               <section key={section.id} id={section.id} className="mb-12">
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">{section.title}</h2>
-                {section.content.split("\n\n").map((para, j) => (
-                  <p key={j} className="text-muted-foreground leading-relaxed mb-4">{para}</p>
-                ))}
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-5 heading-decorated flex items-center">
+                  <span className="section-badge">{i + 1}</span>
+                  {section.title}
+                </h2>
+                <div className="content-box prose-spiritual">
+                  {section.content.split("\n\n").map((para, j) => (
+                    <p key={j} className="text-muted-foreground">{para}</p>
+                  ))}
+                </div>
                 {i === 2 && <AdPlaceholder slot="in-content-1" />}
                 {i === 5 && <AdPlaceholder slot="in-content-2" />}
                 {i === 8 && <AdPlaceholder slot="in-content-3" />}
@@ -325,10 +330,10 @@ const Index = () => {
 
             {/* FAQs */}
             <section id="faqs" className="mb-12">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">Frequently Asked Questions About Angel Number 333</h2>
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6 heading-decorated">Frequently Asked Questions About Angel Number 333</h2>
               <div className="space-y-4">
                 {faqs.map((faq, i) => (
-                  <details key={i} className="group bg-card rounded-lg border border-border p-4">
+                  <details key={i} className="faq-item group rounded-lg border border-border p-4">
                     <summary className="font-serif font-semibold text-foreground cursor-pointer list-none flex justify-between items-center">
                       {faq.q}
                       <span className="text-primary ml-2 group-open:rotate-45 transition-transform text-xl">+</span>
@@ -341,8 +346,8 @@ const Index = () => {
 
             {/* 333 Topic Silo Hub */}
             <div className="mb-12">
-              <h2 className="font-serif text-2xl font-bold text-foreground mb-2">333 Angel Number Deep Dives</h2>
-              <p className="text-muted-foreground text-sm mb-6">Explore every aspect of angel number 333 through our specialized topic guides.</p>
+              <h2 className="font-serif text-2xl font-bold text-foreground mb-2 heading-decorated">333 Angel Number Deep Dives</h2>
+              <p className="text-muted-foreground text-sm mb-6 mt-4">Explore every aspect of angel number 333 through our specialized topic guides.</p>
               <div className="space-y-6">
                 {topicSilos.slice(0, 6).map(topic => {
                   const topicPosts = allBlogPosts.filter(p => p.number === "333" && topic.keywords.some(k => p.slug.includes(k))).slice(0, 4);
@@ -365,8 +370,8 @@ const Index = () => {
 
             {/* Number Pillar Hub Links */}
             <div className="mb-12">
-              <h2 className="font-serif text-2xl font-bold text-foreground mb-2">All Angel Number Guides</h2>
-              <p className="text-muted-foreground text-sm mb-6">Comprehensive pillar guides for every major angel number.</p>
+              <h2 className="font-serif text-2xl font-bold text-foreground mb-2 heading-decorated">All Angel Number Guides</h2>
+              <p className="text-muted-foreground text-sm mb-6 mt-4">Comprehensive pillar guides for every major angel number.</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {numberSilos.filter(s => s.id !== "333").map(s => (
                   <Link key={s.pillarSlug} to={`/${s.pillarSlug}`} className="text-center p-4 bg-card rounded-xl border border-border hover:shadow-card hover:border-primary/30 transition-all group">
@@ -379,7 +384,7 @@ const Index = () => {
 
             {/* Topic Hub Pages */}
             <div className="mb-12">
-              <h2 className="font-serif text-xl font-bold text-foreground mb-4">Angel Numbers by Topic</h2>
+              <h2 className="font-serif text-xl font-bold text-foreground mb-4 heading-decorated">Angel Numbers by Topic</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {topicSilos.filter(t => t.hubSlug).map(t => (
                   <Link key={t.hubSlug} to={`/${t.hubSlug}`} className="flex items-center gap-3 p-3 bg-card rounded-lg border border-border hover:shadow-card hover:border-primary/30 transition-all">
