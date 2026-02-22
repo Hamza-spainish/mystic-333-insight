@@ -72,7 +72,8 @@ const BlogPostPage = () => {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://theangelnumber333.com/" },
-      { "@type": "ListItem", "position": 2, "name": post.title.split(":")[0], "item": `https://theangelnumber333.com/${post.slug}` },
+      { "@type": "ListItem", "position": 2, "name": "Daniel Carter", "item": "https://theangelnumber333.com/author" },
+      { "@type": "ListItem", "position": 3, "name": post.title.split(":")[0], "item": `https://theangelnumber333.com/${post.slug}` },
     ],
   };
 
@@ -81,7 +82,7 @@ const BlogPostPage = () => {
     "@type": "Article",
     "headline": post.title,
     "description": post.metaDescription,
-    "author": { "@type": "Person", "name": "Daniel Carter", "jobTitle": "Spiritual Numerology Expert" },
+    "author": { "@type": "Person", "name": "Daniel Carter", "jobTitle": "Spiritual Numerology Expert", "url": "https://theangelnumber333.com/author" },
     "publisher": { "@type": "Organization", "name": "Angel Number 333 Meaning", "url": "https://theangelnumber333.com" },
     "datePublished": post.datePublished,
     "dateModified": post.dateModified,
@@ -134,6 +135,8 @@ const BlogPostPage = () => {
           <nav className="flex items-center gap-1 text-sm text-muted-foreground mb-6 max-w-3xl mx-auto flex-wrap">
             <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <ChevronRight className="h-3 w-3" />
+            <Link to="/author" className="hover:text-primary transition-colors">Daniel Carter</Link>
+            <ChevronRight className="h-3 w-3" />
             <span className="text-foreground">{post.title.split(":")[0]}</span>
           </nav>
 
@@ -145,7 +148,7 @@ const BlogPostPage = () => {
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">{post.title}</h1>
             
             <div className="flex items-center gap-3 text-sm text-muted-foreground mb-8">
-              <span>By Daniel Carter</span>
+              <Link to="/author" className="hover:text-primary transition-colors">By Daniel Carter</Link>
               <span>•</span>
               <time dateTime={post.dateModified}>Updated {new Date(post.dateModified).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</time>
             </div>

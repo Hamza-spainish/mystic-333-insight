@@ -12,6 +12,7 @@ import Index from "./pages/Index";
 import BlogsPage from "./pages/BlogsPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import { PrivacyPolicy, TermsAndConditions, Disclaimer, CookiePolicy, AffiliateDisclosure } from "./pages/LegalPages";
+import AuthorPage from "./pages/AuthorPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const AnimatedRoutes = () => {
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/affiliate-disclosure" element={<AffiliateDisclosure />} />
+          <Route path="/author" element={<AuthorPage />} />
           <Route path="/:slug" element={<BlogPostPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

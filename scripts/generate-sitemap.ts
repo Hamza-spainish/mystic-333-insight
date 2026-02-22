@@ -12,6 +12,7 @@ const DOMAIN = "https://theangelnumber333.com";
 const staticPages = [
   { path: "/", priority: "1.0", changefreq: "weekly" },
   { path: "/blogs", priority: "0.9", changefreq: "weekly" },
+  { path: "/author", priority: "0.7", changefreq: "monthly" },
   { path: "/privacy-policy", priority: "0.3", changefreq: "yearly" },
   { path: "/terms-and-conditions", priority: "0.3", changefreq: "yearly" },
   { path: "/disclaimer", priority: "0.3", changefreq: "yearly" },
