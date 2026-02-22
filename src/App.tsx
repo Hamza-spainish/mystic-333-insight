@@ -2,11 +2,22 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Index from "./pages/Index";
+import BlogPostPage from "./pages/BlogPostPage";
+import { PrivacyPolicy, TermsAndConditions, Disclaimer, CookiePolicy, AffiliateDisclosure } from "./pages/LegalPages";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -14,11 +25,30 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <ScrollToTop />
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/angel-number-111" element={<BlogPostPage />} />
+            <Route path="/angel-number-222" element={<BlogPostPage />} />
+            <Route path="/angel-number-444" element={<BlogPostPage />} />
+            <Route path="/angel-number-555" element={<BlogPostPage />} />
+            <Route path="/angel-number-777" element={<BlogPostPage />} />
+            <Route path="/angel-number-888" element={<BlogPostPage />} />
+            <Route path="/angel-number-999" element={<BlogPostPage />} />
+            <Route path="/333-meaning-after-breakup" element={<BlogPostPage />} />
+            <Route path="/333-meaning-in-career" element={<BlogPostPage />} />
+            <Route path="/angel-numbers-manifestation-guide" element={<BlogPostPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
+            <Route path="/affiliate-disclosure" element={<AffiliateDisclosure />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <Footer />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
