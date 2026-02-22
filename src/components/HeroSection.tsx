@@ -110,8 +110,8 @@ const HeroSection = () => {
   const handleShare = async () => {
     if (!result) return;
     try {
-      await navigator.share({ title: "My Angel Number 333 Reading", text: `Life Path ${result.lifePath}. ${result.affirmation}`, url: "https://theangelnumber333.com" });
-    } catch { navigator.clipboard.writeText(`Angel Number 333 Reading\nLife Path: ${result.lifePath}\n${result.affirmation}\nhttps://theangelnumber333.com`); alert("Copied to clipboard!"); }
+      await navigator.share({ title: "My Angel Number 333 Reading", text: `Life Path ${result.lifePath}. ${result.affirmation}`, url: "https://www.theangelnumber333.com" });
+    } catch { navigator.clipboard.writeText(`Angel Number 333 Reading\nLife Path: ${result.lifePath}\n${result.affirmation}\nhttps://www.theangelnumber333.com`); alert("Copied to clipboard!"); }
   };
 
   const handleDownloadPDF = () => {

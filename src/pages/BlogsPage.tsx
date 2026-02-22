@@ -34,16 +34,16 @@ const BlogsPage = () => {
     "@type": "CollectionPage",
     "name": "Angel Number Blog – Spiritual Guides & Meanings",
     "description": "Browse all angel number guides including 111, 222, 333, 444, 555, 777, 888, 999 and more spiritual numerology articles.",
-    "url": "https://theangelnumber333.com/blogs",
-    "isPartOf": { "@type": "WebSite", "name": "Angel Number 333 Meaning", "url": "https://theangelnumber333.com" },
+    "url": "https://www.theangelnumber333.com/blogs",
+    "isPartOf": { "@type": "WebSite", "name": "Angel Number 333 Meaning", "url": "https://www.theangelnumber333.com" },
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://theangelnumber333.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://theangelnumber333.com/blogs" },
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.theangelnumber333.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.theangelnumber333.com/blogs" },
     ],
   };
 
@@ -52,10 +52,10 @@ const BlogsPage = () => {
       <Helmet>
         <title>Angel Number Blog – All Spiritual Guides & Meanings (2026)</title>
         <meta name="description" content="Browse all angel number guides including 111, 222, 333, 444, 555, 777, 888, 999 and more spiritual numerology articles." />
-        <link rel="canonical" href="https://theangelnumber333.com/blogs" />
+        <link rel="canonical" href="https://www.theangelnumber333.com/blogs" />
         <meta property="og:title" content="Angel Number Blog – Spiritual Guides & Meanings" />
         <meta property="og:description" content="Browse all angel number guides and spiritual numerology articles." />
-        <meta property="og:url" content="https://theangelnumber333.com/blogs" />
+        <meta property="og:url" content="https://www.theangelnumber333.com/blogs" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Angel Number 333 Meaning" />
         <meta name="twitter:card" content="summary_large_image" />

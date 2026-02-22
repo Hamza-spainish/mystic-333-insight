@@ -9,11 +9,14 @@ interface LegalPageProps {
   children: React.ReactNode;
 }
 
-const LegalLayout = ({ title, metaTitle, metaDescription, children }: LegalPageProps) => (
+const LegalLayout = ({ title, metaTitle, metaDescription, children }: LegalPageProps) => {
+  const slug = title.toLowerCase().replace(/[& ]+/g, '-').replace(/--/g, '-');
+  return (
   <>
     <Helmet>
       <title>{metaTitle}</title>
       <meta name="description" content={metaDescription} />
+      <link rel="canonical" href={`https://www.theangelnumber333.com/${slug}`} />
     </Helmet>
     <div className="pt-24 pb-16">
       <div className="container mx-auto px-4">
@@ -31,7 +34,8 @@ const LegalLayout = ({ title, metaTitle, metaDescription, children }: LegalPageP
       </div>
     </div>
   </>
-);
+  );
+};
 
 export const PrivacyPolicy = () => (
   <LegalLayout title="Privacy Policy" metaTitle="Privacy Policy - Angel Number 333" metaDescription="Privacy policy for theangelnumber333.com. Learn how we collect, use, and protect your personal information.">

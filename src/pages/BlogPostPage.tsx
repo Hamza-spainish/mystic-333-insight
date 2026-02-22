@@ -74,9 +74,9 @@ const BlogPostPage = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://theangelnumber333.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Daniel Carter", "item": "https://theangelnumber333.com/author" },
-      { "@type": "ListItem", "position": 3, "name": post.title.split(":")[0], "item": `https://theangelnumber333.com/${post.slug}` },
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.theangelnumber333.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Daniel Carter", "item": "https://www.theangelnumber333.com/author" },
+      { "@type": "ListItem", "position": 3, "name": post.title.split(":")[0], "item": `https://www.theangelnumber333.com/${post.slug}` },
     ],
   };
 
@@ -85,12 +85,12 @@ const BlogPostPage = () => {
     "@type": "Article",
     "headline": post.title,
     "description": post.metaDescription,
-    "author": { "@type": "Person", "name": "Daniel Carter", "jobTitle": "Spiritual Numerology Expert", "url": "https://theangelnumber333.com/author" },
-    "publisher": { "@type": "Organization", "name": "Angel Number 333 Meaning", "url": "https://theangelnumber333.com" },
+    "author": { "@type": "Person", "name": "Daniel Carter", "jobTitle": "Spiritual Numerology Expert", "url": "https://www.theangelnumber333.com/author" },
+    "publisher": { "@type": "Organization", "name": "Angel Number 333 Meaning", "url": "https://www.theangelnumber333.com" },
     "datePublished": post.datePublished,
     "dateModified": post.dateModified,
-    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://theangelnumber333.com/${post.slug}` },
-    "url": `https://theangelnumber333.com/${post.slug}`,
+    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.theangelnumber333.com/${post.slug}` },
+    "url": `https://www.theangelnumber333.com/${post.slug}`,
   };
 
   const faqSchema = {
@@ -108,8 +108,8 @@ const BlogPostPage = () => {
     "@type": "WebPage",
     "name": post.metaTitle,
     "description": post.metaDescription,
-    "url": `https://theangelnumber333.com/${post.slug}`,
-    "isPartOf": { "@type": "WebSite", "name": "Angel Number 333 Meaning", "url": "https://theangelnumber333.com" },
+    "url": `https://www.theangelnumber333.com/${post.slug}`,
+    "isPartOf": { "@type": "WebSite", "name": "Angel Number 333 Meaning", "url": "https://www.theangelnumber333.com" },
   };
 
   return (
@@ -117,10 +117,10 @@ const BlogPostPage = () => {
       <Helmet>
         <title>{post.metaTitle}</title>
         <meta name="description" content={post.metaDescription} />
-        <link rel="canonical" href={`https://theangelnumber333.com/${post.slug}`} />
+        <link rel="canonical" href={`https://www.theangelnumber333.com/${post.slug}`} />
         <meta property="og:title" content={post.metaTitle} />
         <meta property="og:description" content={post.metaDescription} />
-        <meta property="og:url" content={`https://theangelnumber333.com/${post.slug}`} />
+        <meta property="og:url" content={`https://www.theangelnumber333.com/${post.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="Angel Number 333 Meaning" />
         <meta name="twitter:card" content="summary_large_image" />

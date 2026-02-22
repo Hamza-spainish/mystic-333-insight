@@ -101,7 +101,7 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Angel Number 333 Meaning",
-    "url": "https://theangelnumber333.com",
+    "url": "https://www.theangelnumber333.com",
     "description": "Your comprehensive guide to angel number 333 meaning, spiritual significance, love, twin flames, biblical symbolism and manifestation.",
     "publisher": { "@type": "Organization", "name": "Angel Number 333 Meaning" },
   };
@@ -111,11 +111,11 @@ const Index = () => {
     "@type": "Article",
     "headline": "Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism",
     "description": "Discover the powerful meaning of angel number 333. Learn about 333 spiritual meaning, love, twin flame connections, biblical symbolism, manifestation & why you keep seeing 333.",
-    "author": { "@type": "Person", "name": "Daniel Carter", "jobTitle": "Spiritual Numerology Expert", "url": "https://theangelnumber333.com/author" },
-    "publisher": { "@type": "Organization", "name": "Angel Number 333 Meaning", "url": "https://theangelnumber333.com" },
+    "author": { "@type": "Person", "name": "Daniel Carter", "jobTitle": "Spiritual Numerology Expert", "url": "https://www.theangelnumber333.com/author" },
+    "publisher": { "@type": "Organization", "name": "Angel Number 333 Meaning", "url": "https://www.theangelnumber333.com" },
     "datePublished": "2026-01-10",
     "dateModified": "2026-02-22",
-    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://theangelnumber333.com/" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.theangelnumber333.com/" },
   };
 
   const faqSchema = {
@@ -132,7 +132,7 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://theangelnumber333.com/" },
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.theangelnumber333.com/" },
     ],
   };
 
@@ -143,14 +143,14 @@ const Index = () => {
     "description": "Comprehensive guide to angel number 333 meaning including spiritual, love, twin flame, biblical & manifestation interpretations with free calculator tool.",
     "brand": { "@type": "Brand", "name": "Angel Number 333 Meaning" },
     "category": "Spiritual Guides",
-    "url": "https://theangelnumber333.com/",
-    "image": "https://theangelnumber333.com/og-image.jpg",
+    "url": "https://www.theangelnumber333.com/",
+    "image": "https://www.theangelnumber333.com/og-image.jpg",
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "url": "https://theangelnumber333.com/",
+      "url": "https://www.theangelnumber333.com/",
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -174,7 +174,7 @@ const Index = () => {
     "description": "Free online calculator that reveals your personal angel number meaning based on your name and birth date using advanced numerology.",
     "applicationCategory": "LifestyleApplication",
     "operatingSystem": "Web Browser",
-    "url": "https://theangelnumber333.com/#calculator",
+    "url": "https://www.theangelnumber333.com/#calculator",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -190,8 +190,8 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Angel Number 333 Meaning",
-    "url": "https://theangelnumber333.com",
-    "logo": "https://theangelnumber333.com/favicon.ico",
+    "url": "https://www.theangelnumber333.com",
+    "logo": "https://www.theangelnumber333.com/favicon.ico",
     "description": "Trusted spiritual numerology resource providing comprehensive angel number guides, calculators, and spiritual growth content.",
     "foundingDate": "2025",
     "founder": { "@type": "Person", "name": "Daniel Carter" },
@@ -203,10 +203,10 @@ const Index = () => {
       <Helmet>
         <title>Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism</title>
         <meta name="description" content="Discover the powerful meaning of angel number 333. Learn about 333 spiritual meaning, love, twin flame connections, biblical symbolism, manifestation & why you keep seeing 333." />
-        <link rel="canonical" href="https://theangelnumber333.com/" />
+        <link rel="canonical" href="https://www.theangelnumber333.com/" />
         <meta property="og:title" content="Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism" />
         <meta property="og:description" content="Discover the powerful meaning of angel number 333. Spiritual guidance, love meanings, twin flame connections & biblical symbolism." />
-        <meta property="og:url" content="https://theangelnumber333.com/" />
+        <meta property="og:url" content="https://www.theangelnumber333.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Angel Number 333 Meaning" />
         <meta name="twitter:card" content="summary_large_image" />
