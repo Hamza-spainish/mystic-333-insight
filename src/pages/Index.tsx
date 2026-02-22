@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import CalculatorTool from "@/components/CalculatorTool";
-import BlogGrid from "@/components/BlogGrid";
+
 import AuthorBox from "@/components/AuthorBox";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import NewsletterSection from "@/components/NewsletterSection";
@@ -254,7 +254,6 @@ const Index = () => {
         </div>
       </article>
 
-      <BlogGrid />
       <TestimonialsSection />
       <AuthorBox />
       <NewsletterSection />

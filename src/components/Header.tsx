@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "Calculator", path: "/#calculator" },
-  { label: "Blog", path: "/#blog" },
+  { label: "Blog", path: "/blogs" },
   { label: "About", path: "/#author" },
 ];
 
@@ -56,23 +56,25 @@ const Header = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.path}
-                onClick={() =>
-                  link.path.startsWith("/#")
-                    ? handleNavClick(link.path)
-                    : undefined
-                }
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                {link.path.startsWith("/#") ? (
-                  link.label
-                ) : (
-                  <Link to={link.path}>{link.label}</Link>
-                )}
-              </button>
-            ))}
+            {navLinks.map((link) =>
+              link.path.startsWith("/#") ? (
+                <button
+                  key={link.path}
+                  onClick={() => handleNavClick(link.path)}
+                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </button>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </nav>
 
           {/* Mobile toggle */}
@@ -96,23 +98,26 @@ const Header = () => {
             className="md:hidden bg-background/95 backdrop-blur-md border-b border-border"
           >
             <nav className="container mx-auto px-4 py-4 flex flex-col gap-3">
-              {navLinks.map((link) => (
-                <button
-                  key={link.path}
-                  onClick={() =>
-                    link.path.startsWith("/#")
-                      ? handleNavClick(link.path)
-                      : undefined
-                  }
-                  className="text-left py-2 text-muted-foreground hover:text-primary transition-colors font-medium"
-                >
-                  {link.path.startsWith("/#") ? (
-                    link.label
-                  ) : (
-                    <Link to={link.path}>{link.label}</Link>
-                  )}
-                </button>
-              ))}
+              {navLinks.map((link) =>
+                link.path.startsWith("/#") ? (
+                  <button
+                    key={link.path}
+                    onClick={() => handleNavClick(link.path)}
+                    className="text-left py-2 text-muted-foreground hover:text-primary transition-colors font-medium"
+                  >
+                    {link.label}
+                  </button>
+                ) : (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    onClick={() => setIsMobileOpen(false)}
+                    className="text-left py-2 text-muted-foreground hover:text-primary transition-colors font-medium"
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
             </nav>
           </motion.div>
         )}
