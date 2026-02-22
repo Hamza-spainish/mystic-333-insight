@@ -922,6 +922,10 @@ export const blogPosts: BlogPost[] = [
   },
 ];
 
+import { extraBlogPosts } from "./extraBlogPosts";
+
+export const allBlogPosts: BlogPost[] = [...blogPosts, ...extraBlogPosts];
+
 export const getPostBySlug = (slug: string): BlogPost | undefined => {
-  return blogPosts.find((post) => post.slug === slug);
+  return allBlogPosts.find((post) => post.slug === slug);
 };

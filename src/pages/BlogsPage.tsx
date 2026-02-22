@@ -2,10 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { blogPosts } from "@/data/blogPosts";
+import { allBlogPosts } from "@/data/blogPosts";
 
-const sortedPosts = [...blogPosts].sort(
-  (a, b) => new Date(a.dateModified).getTime() - new Date(b.dateModified).getTime()
+const sortedPosts = [...allBlogPosts].sort(
+  (a, b) => new Date(a.datePublished).getTime() - new Date(b.datePublished).getTime()
 );
 
 const BlogsPage = () => {
