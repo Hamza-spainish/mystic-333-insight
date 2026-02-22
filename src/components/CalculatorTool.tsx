@@ -122,11 +122,11 @@ const CalculatorTool = () => {
       await navigator.share({
         title: "My Angel Number 333 Reading",
         text: `My personalized 333 reading: Life Path ${result.lifePath}. ${result.affirmation}`,
-        url: "https://theangelnumber333.com",
+        url: "https://www.theangelnumber333.com",
       });
     } catch {
       navigator.clipboard.writeText(
-        `My Angel Number 333 Reading\nLife Path: ${result.lifePath}\n${result.affirmation}\nhttps://theangelnumber333.com`
+        `My Angel Number 333 Reading\nLife Path: ${result.lifePath}\n${result.affirmation}\nhttps://www.theangelnumber333.com`
       );
       alert("Reading copied to clipboard!");
     }

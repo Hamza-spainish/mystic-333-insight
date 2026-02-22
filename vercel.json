@@ -1,4 +1,12 @@
 {
+  "redirects": [
+    {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "theangelnumber333.com" }],
+      "destination": "https://www.theangelnumber333.com/:path",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/google247936339c711ead.html", "destination": "/google247936339c711ead.html" },
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
