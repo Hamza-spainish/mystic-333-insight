@@ -35,15 +35,17 @@ const RenderTable = ({ table }: { table: TableData }) => (
 const RenderSection = ({ section, index }: { section: BlogSection; index: number }) => (
   <section id={`section-${index}`} className="mb-10">
     {section.level === "h2" ? (
-      <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">{section.heading}</h2>
+      <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4 heading-decorated">{section.heading}</h2>
     ) : (
-      <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{section.heading}</h3>
+      <h3 className="font-serif text-xl font-semibold text-foreground mb-3 heading-decorated">{section.heading}</h3>
     )}
-    {section.paragraphs.map((p, j) => (
-      <p key={j} className="text-muted-foreground leading-relaxed mb-4">{p}</p>
-    ))}
+    <div className="content-box prose-spiritual">
+      {section.paragraphs.map((p, j) => (
+        <p key={j} className="text-muted-foreground">{p}</p>
+      ))}
+    </div>
     {section.bulletPoints && (
-      <ul className="list-disc pl-6 space-y-2 mb-6">
+      <ul className="list-disc pl-6 space-y-2 mb-6 ml-4">
         {section.bulletPoints.map((bp, j) => (
           <li key={j} className="text-muted-foreground leading-relaxed text-sm">{bp}</li>
         ))}
@@ -146,7 +148,7 @@ const BlogPostPage = () => {
               <ArrowLeft className="h-3.5 w-3.5" /> Back to Angel Number 333
             </Link>
 
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">{post.title}</h1>
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight heading-decorated">{post.title}</h1>
             
             <div className="flex items-center gap-3 text-sm text-muted-foreground mb-8">
               <Link to="/author" className="hover:text-primary transition-colors">By Daniel Carter</Link>
@@ -188,10 +190,10 @@ const BlogPostPage = () => {
 
             {/* FAQs */}
             <section id="blog-faqs" className="mb-10">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6 heading-decorated">Frequently Asked Questions</h2>
               <div className="space-y-3">
                 {post.faqs.map((faq, i) => (
-                  <details key={i} className="group bg-card rounded-lg border border-border p-4">
+                  <details key={i} className="faq-item group rounded-lg border border-border p-4">
                     <summary className="font-serif font-semibold text-foreground cursor-pointer list-none flex justify-between items-center">
                       {faq.question}
                       <span className="text-primary ml-2 group-open:rotate-45 transition-transform text-xl">+</span>
