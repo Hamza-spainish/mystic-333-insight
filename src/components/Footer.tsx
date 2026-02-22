@@ -15,8 +15,13 @@ const Footer = () => {
   ];
 
   const moreLinks = [
+    { label: "333 in Love", path: "/333-love-and-relationships" },
+    { label: "333 Twin Flame", path: "/333-twin-flame-connection-reunion" },
+    { label: "333 Career & Success", path: "/333-career-and-success" },
+    { label: "333 Money & Abundance", path: "/333-money-and-abundance" },
     { label: "333 After Breakup", path: "/333-meaning-after-breakup" },
-    { label: "333 in Career", path: "/333-meaning-in-career" },
+    { label: "Angel Numbers & Love", path: "/angel-numbers-and-love" },
+    { label: "Twin Flame Guide", path: "/angel-numbers-twin-flame-guide" },
     { label: "Manifestation Guide", path: "/angel-numbers-manifestation-guide" },
   ];
 

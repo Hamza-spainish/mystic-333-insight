@@ -1,14 +1,34 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { allBlogPosts } from "@/data/blogPosts";
+import { numberSilos, topicSilos } from "@/data/siloStructure";
 
 const sortedPosts = [...allBlogPosts].sort(
   (a, b) => new Date(a.datePublished).getTime() - new Date(b.datePublished).getTime()
 );
 
+type FilterType = "all" | `number-${string}` | `topic-${string}`;
+
 const BlogsPage = () => {
+  const [filter, setFilter] = useState<FilterType>("all");
+
+  const filteredPosts = sortedPosts.filter((post) => {
+    if (filter === "all") return true;
+    if (filter.startsWith("number-")) {
+      const num = filter.replace("number-", "");
+      return post.number === num || post.slug.includes(`${num}-meaning`) || post.slug.includes(`angel-number-${num}`);
+    }
+    if (filter.startsWith("topic-")) {
+      const topicId = filter.replace("topic-", "");
+      const topic = topicSilos.find(t => t.id === topicId);
+      return topic ? topic.keywords.some(k => post.slug.includes(k)) : false;
+    }
+    return true;
+  });
+
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -56,23 +76,79 @@ const BlogsPage = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-14"
+            className="text-center mb-10"
           >
             <h1 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-4">
               Angel Number Blog
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore our comprehensive guides on angel numbers, spiritual meanings, love, career and manifestation. {sortedPosts.length} in-depth articles to guide your journey.
+              Explore our comprehensive guides on angel numbers, spiritual meanings, love, career and manifestation. {allBlogPosts.length} in-depth articles to guide your journey.
             </p>
           </motion.div>
 
+          {/* Silo Filters: Numbers */}
+          <div className="mb-4">
+            <p className="text-xs font-medium text-muted-foreground mb-2 uppercase tracking-wider">By Number</p>
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => setFilter("all")}
+                className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${filter === "all" ? "bg-primary text-primary-foreground border-primary" : "bg-card text-muted-foreground border-border hover:border-primary/50"}`}
+              >
+                All ({allBlogPosts.length})
+              </button>
+              {numberSilos.map(s => (
+                <button
+                  key={s.id}
+                  onClick={() => setFilter(`number-${s.id}`)}
+                  className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${filter === `number-${s.id}` ? "bg-primary text-primary-foreground border-primary" : "bg-card text-muted-foreground border-border hover:border-primary/50"}`}
+                >
+                  {s.id}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Silo Filters: Topics */}
+          <div className="mb-10">
+            <p className="text-xs font-medium text-muted-foreground mb-2 uppercase tracking-wider">By Topic</p>
+            <div className="flex flex-wrap gap-2">
+              {topicSilos.map(t => (
+                <button
+                  key={t.id}
+                  onClick={() => setFilter(`topic-${t.id}`)}
+                  className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${filter === `topic-${t.id}` ? "bg-primary text-primary-foreground border-primary" : "bg-card text-muted-foreground border-border hover:border-primary/50"}`}
+                >
+                  {t.emoji} {t.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Pillar Pages Quick Links */}
+          {filter === "all" && (
+            <div className="mb-10 p-6 bg-secondary/50 rounded-xl border border-border">
+              <h2 className="font-serif text-lg font-bold text-foreground mb-4">📌 Pillar Guides (Start Here)</h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+                <Link to="/" className="text-center p-3 bg-gradient-spiritual rounded-lg text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity">
+                  333 Guide ★
+                </Link>
+                {numberSilos.filter(s => s.id !== "333").map(s => (
+                  <Link key={s.pillarSlug} to={`/${s.pillarSlug}`} className="text-center p-3 bg-card rounded-lg border border-border hover:border-primary/30 hover:shadow-card transition-all text-sm text-primary font-medium">
+                    {s.id} Guide
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Posts Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {sortedPosts.map((post, i) => (
+            {filteredPosts.map((post, i) => (
               <motion.article
                 key={post.slug}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
+                transition={{ delay: Math.min(i * 0.02, 0.5) }}
               >
                 <Link
                   to={`/${post.slug}`}
@@ -95,6 +171,10 @@ const BlogsPage = () => {
               </motion.article>
             ))}
           </div>
+
+          {filteredPosts.length === 0 && (
+            <p className="text-center text-muted-foreground py-12">No posts found for this filter.</p>
+          )}
         </div>
       </section>
     </>
