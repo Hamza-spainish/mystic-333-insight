@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import CalculatorTool from "@/components/CalculatorTool";
 import BlogGrid from "@/components/BlogGrid";
@@ -31,68 +32,173 @@ const faqs = [
   { q: "Does 333 mean good luck?", a: "333 represents divine alignment and spiritual support, which often manifests as what we call 'good luck.' It indicates that the universe is orchestrating favorable circumstances on your behalf." },
 ];
 
+const quickRefTable = {
+  caption: "Angel Number 333 Complete Meaning Reference",
+  headers: ["Aspect", "333 Meaning", "Key Message"],
+  rows: [
+    ["Spiritual", "Ascended masters near", "You are divinely guided and protected"],
+    ["Love", "Growth & deeper connection", "Open your heart to divine love"],
+    ["Twin Flame", "Reunion & acceleration", "Trust divine timing of union"],
+    ["Biblical", "Holy Trinity & resurrection", "God's triune presence active"],
+    ["Numerology", "Creative gateway (3+3+3=9)", "Express your authentic gifts"],
+    ["Career", "Creative expansion", "Align work with purpose"],
+    ["Manifestation", "Amplified intentions", "Your thoughts are manifesting rapidly"],
+    ["Law of Attraction", "Mind-heart-body alignment", "Harmonize thoughts, feelings, actions"],
+  ],
+};
+
 const Index = () => {
+  const homepageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Angel Number 333 Meaning",
+    "url": "https://theangelnumber333.com",
+    "description": "Your comprehensive guide to angel number 333 meaning, spiritual significance, love, twin flames, biblical symbolism and manifestation.",
+    "publisher": { "@type": "Organization", "name": "Angel Number 333 Meaning" },
+  };
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism",
+    "description": "Discover the powerful meaning of angel number 333. Learn about 333 spiritual meaning, love, twin flame connections, biblical symbolism, manifestation & why you keep seeing 333.",
+    "author": { "@type": "Person", "name": "Daniel Carter", "jobTitle": "Spiritual Numerology Expert" },
+    "publisher": { "@type": "Organization", "name": "Angel Number 333 Meaning", "url": "https://theangelnumber333.com" },
+    "datePublished": "2026-01-10",
+    "dateModified": "2026-02-22",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://theangelnumber333.com/" },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(f => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://theangelnumber333.com/" },
+    ],
+  };
+
   return (
     <>
       <Helmet>
         <title>Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism</title>
         <meta name="description" content="Discover the powerful meaning of angel number 333. Learn about 333 spiritual meaning, love, twin flame connections, biblical symbolism, manifestation & why you keep seeing 333." />
         <link rel="canonical" href="https://theangelnumber333.com/" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map(f => ({
-              "@type": "Question",
-              "name": f.q,
-              "acceptedAnswer": { "@type": "Answer", "text": f.a }
-            }))
-          })}
-        </script>
+        <meta property="og:title" content="Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism" />
+        <meta property="og:description" content="Discover the powerful meaning of angel number 333. Spiritual guidance, love meanings, twin flame connections & biblical symbolism." />
+        <meta property="og:url" content="https://theangelnumber333.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Angel Number 333 Meaning" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Angel Number 333 Meaning: Spiritual, Love & Twin Flame Symbolism" />
+        <meta name="twitter:description" content="Discover the powerful meaning of angel number 333." />
+        <script type="application/ld+json">{JSON.stringify(homepageSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <HeroSection />
 
+      {/* Quick Reference Table */}
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-3xl mx-auto overflow-x-auto">
+          <p className="font-serif font-semibold text-foreground mb-3">{quickRefTable.caption}</p>
+          <table className="w-full border-collapse text-sm mb-2">
+            <thead>
+              <tr className="bg-primary/10">
+                {quickRefTable.headers.map((h, i) => (
+                  <th key={i} className="border border-border px-3 py-2 text-left font-serif font-semibold text-foreground">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {quickRefTable.rows.map((row, i) => (
+                <tr key={i} className={i % 2 === 0 ? "bg-card" : "bg-secondary/30"}>
+                  {row.map((cell, j) => (
+                    <td key={j} className="border border-border px-3 py-2 text-muted-foreground">{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       {/* Table of Contents */}
-      <nav id="content" className="py-10 bg-secondary/30 border-b border-border">
+      <nav id="content" className="py-8 bg-secondary/30 border-y border-border">
         <div className="container mx-auto px-4">
-          <h2 className="font-serif text-xl font-bold text-foreground mb-4">📖 Table of Contents</h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-            {homepageSections.map((s, i) => (
-              <li key={s.id}>
-                <a href={`#${s.id}`} className="text-sm text-primary hover:underline">
-                  {i + 1}. {s.title}
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-xl font-bold text-foreground mb-4">📖 Table of Contents</h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {homepageSections.map((s, i) => (
+                <li key={s.id}>
+                  <a href={`#${s.id}`} className="text-sm text-primary hover:underline">
+                    {i + 1}. {s.title}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a href="#calculator" className="text-sm text-primary hover:underline">
+                  🔮 Personal 333 Calculator
                 </a>
               </li>
-            ))}
-            <li>
-              <a href="#faqs" className="text-sm text-primary hover:underline">
-                {homepageSections.length + 1}. Frequently Asked Questions
-              </a>
-            </li>
-          </ul>
+              <li>
+                <a href="#faqs" className="text-sm text-primary hover:underline">
+                  {homepageSections.length + 1}. Frequently Asked Questions
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
 
-      {/* Main Content */}
+      {/* Main Content with Calculator after first section */}
       <article className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            {homepageSections.map((section, i) => (
+            {/* First section */}
+            <section id={homepageSections[0].id} className="mb-12">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">{homepageSections[0].title}</h2>
+              {homepageSections[0].content.split("\n\n").map((para, j) => (
+                <p key={j} className="text-muted-foreground leading-relaxed mb-4">{para}</p>
+              ))}
+            </section>
+          </div>
+        </div>
+      </article>
+
+      {/* Calculator after first section */}
+      <CalculatorTool />
+
+      {/* Remaining content */}
+      <article className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            {homepageSections.slice(1).map((section, i) => (
               <section key={section.id} id={section.id} className="mb-12">
                 <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">{section.title}</h2>
                 {section.content.split("\n\n").map((para, j) => (
                   <p key={j} className="text-muted-foreground leading-relaxed mb-4">{para}</p>
                 ))}
-                {i === 2 && <AdPlaceholder slot="in-content-1" />}
-                {i === 5 && <AdPlaceholder slot="in-content-2" />}
-                {i === 8 && <AdPlaceholder slot="in-content-3" />}
+                {i === 1 && <AdPlaceholder slot="in-content-1" />}
+                {i === 4 && <AdPlaceholder slot="in-content-2" />}
+                {i === 7 && <AdPlaceholder slot="in-content-3" />}
               </section>
             ))}
 
             {/* FAQs */}
             <section id="faqs" className="mb-12">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">Frequently Asked Questions About Angel Number 333</h2>
               <div className="space-y-4">
                 {faqs.map((faq, i) => (
                   <details key={i} className="group bg-card rounded-lg border border-border p-4">
@@ -106,13 +212,36 @@ const Index = () => {
               </div>
             </section>
 
+            {/* Internal linking */}
+            <div className="mb-12">
+              <h2 className="font-serif text-xl font-bold text-foreground mb-4">Explore Related Angel Number Guides</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  { slug: "angel-number-111", label: "Angel Number 111 Meaning" },
+                  { slug: "angel-number-222", label: "Angel Number 222 Meaning" },
+                  { slug: "angel-number-444", label: "Angel Number 444 Meaning" },
+                  { slug: "angel-number-555", label: "Angel Number 555 Meaning" },
+                  { slug: "angel-number-777", label: "Angel Number 777 Meaning" },
+                  { slug: "angel-number-888", label: "Angel Number 888 Meaning" },
+                  { slug: "angel-number-999", label: "Angel Number 999 Meaning" },
+                  { slug: "angel-numbers-manifestation-guide", label: "Manifestation Guide" },
+                  { slug: "333-meaning-after-breakup", label: "333 After Breakup" },
+                  { slug: "333-meaning-in-career", label: "333 in Career" },
+                ].map(p => (
+                  <Link key={p.slug} to={`/${p.slug}`} className="block p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all text-sm text-primary font-medium hover:underline">
+                    → {p.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             {/* CTA */}
             <div className="text-center p-8 bg-gradient-spiritual rounded-2xl shadow-spiritual">
               <h2 className="font-serif text-2xl font-bold text-primary-foreground mb-3">
                 Discover Your Personal 333 Meaning
               </h2>
               <p className="text-primary-foreground/80 mb-4 text-sm">
-                Use our free calculator to unlock a personalized spiritual reading based on your name and birth date.
+                Use our free calculator above to unlock a personalized spiritual reading based on your name and birth date.
               </p>
               <a
                 href="#calculator"
@@ -125,7 +254,6 @@ const Index = () => {
         </div>
       </article>
 
-      <CalculatorTool />
       <BlogGrid />
       <TestimonialsSection />
       <AuthorBox />
