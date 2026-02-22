@@ -11,13 +11,13 @@ const AuthorPage = () => {
     "name": "Daniel Carter",
     "jobTitle": "Spiritual Numerology Expert",
     "description": "Daniel Carter is a renowned spiritual numerology expert with over eight years of dedicated practice in angel number interpretation, sacred geometry, and spiritual counseling.",
-    "url": "https://theangelnumber333.com/author",
+    "url": "https://www.theangelnumber333.com/author",
     "sameAs": [],
     "knowsAbout": ["Angel Numbers", "Numerology", "Spiritual Counseling", "Sacred Geometry", "Manifestation"],
     "worksFor": {
       "@type": "Organization",
       "name": "Angel Number 333 Meaning",
-      "url": "https://theangelnumber333.com"
+      "url": "https://www.theangelnumber333.com"
     }
   };
 
@@ -25,8 +25,8 @@ const AuthorPage = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://theangelnumber333.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Daniel Carter", "item": "https://theangelnumber333.com/author" },
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.theangelnumber333.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Daniel Carter", "item": "https://www.theangelnumber333.com/author" },
     ],
   };
 
@@ -35,7 +35,7 @@ const AuthorPage = () => {
     "@type": "ProfilePage",
     "name": "Daniel Carter – Spiritual Numerology Expert | Angel Number 333",
     "description": "Meet Daniel Carter, spiritual numerology expert with 8+ years of experience in angel number interpretation and spiritual counseling.",
-    "url": "https://theangelnumber333.com/author",
+    "url": "https://www.theangelnumber333.com/author",
     "mainEntity": {
       "@type": "Person",
       "name": "Daniel Carter"
@@ -43,7 +43,7 @@ const AuthorPage = () => {
     "isPartOf": {
       "@type": "WebSite",
       "name": "Angel Number 333 Meaning",
-      "url": "https://theangelnumber333.com"
+      "url": "https://www.theangelnumber333.com"
     },
   };
 
@@ -54,10 +54,10 @@ const AuthorPage = () => {
       <Helmet>
         <title>Daniel Carter – Spiritual Numerology Expert | Angel Number 333</title>
         <meta name="description" content="Meet Daniel Carter, spiritual numerology expert with 8+ years of experience in angel number interpretation, sacred geometry, and spiritual counseling." />
-        <link rel="canonical" href="https://theangelnumber333.com/author" />
+        <link rel="canonical" href="https://www.theangelnumber333.com/author" />
         <meta property="og:title" content="Daniel Carter – Spiritual Numerology Expert" />
         <meta property="og:description" content="Meet Daniel Carter, spiritual numerology expert with 8+ years guiding thousands in understanding divine messages through numbers." />
-        <meta property="og:url" content="https://theangelnumber333.com/author" />
+        <meta property="og:url" content="https://www.theangelnumber333.com/author" />
         <meta property="og:type" content="profile" />
         <meta property="og:site_name" content="Angel Number 333 Meaning" />
         <meta name="twitter:card" content="summary" />

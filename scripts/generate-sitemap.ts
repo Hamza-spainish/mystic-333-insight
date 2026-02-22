@@ -7,7 +7,7 @@
  */
 
 // Static pages with their priorities and changefreq
-const DOMAIN = "https://theangelnumber333.com";
+const DOMAIN = "https://www.theangelnumber333.com";
 
 const staticPages = [
   { path: "/", priority: "1.0", changefreq: "weekly" },

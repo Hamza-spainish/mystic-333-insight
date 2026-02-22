@@ -14,4 +14,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://theangelnumber333.com/sitemap.xml
+Sitemap: https://www.theangelnumber333.com/sitemap.xml
