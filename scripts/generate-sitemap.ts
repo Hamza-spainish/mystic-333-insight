@@ -50,6 +50,27 @@ const blogSlugs = [
   "mirror-numbers-meaning", "angel-numbers-and-tarot", "angel-numbers-and-crystals",
   "angel-numbers-for-beginners", "angel-numbers-and-zodiac", "angel-numbers-and-numerology",
   "angel-numbers-complete-guide",
+  // 333-specific topic posts
+  "what-does-333-mean", "333-love-and-relationships", "333-career-and-success",
+  "why-you-keep-seeing-333", "333-twin-flame-connection-reunion", "333-money-and-abundance",
+  "333-personal-growth", "333-spiritual-significance-everywhere", "333-new-beginnings",
+  "333-life-purpose", "333-numerology-powerful-number", "333-ascended-masters-connection",
+  "333-master-number-numerology", "333-symbolism-spiritual-realm", "333-hidden-messages",
+  "333-twin-flame-near", "333-soulmates-meaning", "333-romantic-relationships-angels",
+  "333-love-manifestation", "333-healthy-relationships", "333-career-path-guide",
+  "333-entrepreneurs-business", "333-motivation-productivity", "333-financial-abundance-guide",
+  "333-achieving-goals", "333-life-transitions", "333-feeling-stuck", "333-life-decisions",
+  "333-spiritual-awakening-signs", "333-before-big-changes", "333-twin-flame-separation",
+  "333-twin-flame-reunion-signs", "333-soul-mission", "333-karmic-relationships",
+  "333-spiritual-partner", "333-manifest-desires", "333-daily-life-meaning",
+  "333-after-meditation-prayer", "333-stay-positive-focused", "333-spiritual-practices-energy",
+  "333-real-life-stories", "333-during-hard-times", "333-thinking-of-someone",
+  "333-messages-from-angels", "333-emotional-healing", "333-mental-spiritual-wellbeing",
+  "333-stress-anxiety-relief", "333-self-love-inner-peace", "333-healing-energy",
+  "333-how-to-respond", "333-bible-references", "333-astrology-connection",
+  "333-meditation-mindfulness", "333-attract-positive-energy", "333-fun-facts",
+  "333-memes-spiritual-humor", "333-popular-culture-movies", "333-journal-ideas",
+  "333-social-media-messages",
 ];
 
 const today = new Date().toISOString().split("T")[0];
