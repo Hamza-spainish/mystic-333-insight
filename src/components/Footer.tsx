@@ -25,6 +25,11 @@ const Footer = () => {
     { label: "Manifestation Guide", path: "/angel-numbers-manifestation-guide" },
   ];
 
+  const siteLinks = [
+    { label: "All Blog Posts", path: "/blogs" },
+    { label: "About Daniel Carter", path: "/author" },
+  ];
+
   const legalLinks = [
     { label: "Privacy Policy", path: "/privacy-policy" },
     { label: "Terms & Conditions", path: "/terms-and-conditions" },
@@ -85,9 +90,22 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Site */}
           <div>
-            <h4 className="font-serif font-semibold text-foreground mb-4">Legal</h4>
+            <h4 className="font-serif font-semibold text-foreground mb-4">Site</h4>
+            <ul className="space-y-2">
+              {siteLinks.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h4 className="font-serif font-semibold text-foreground mb-4 mt-6">Legal</h4>
             <ul className="space-y-2">
               {legalLinks.map((link) => (
                 <li key={link.path}>
