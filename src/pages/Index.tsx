@@ -170,36 +170,36 @@ const Index = () => {
         <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
       </Helmet>
 
+      {/* Hero with integrated Calculator */}
+      <HeroSection />
+
       {/* Verification Badges */}
-      <div className="bg-secondary/30 border-y border-border py-4">
+      <div className="bg-secondary/30 border-y border-border py-3">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold">✓</span>
-              <span>Expert Verified Content</span>
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6">
+            <div className="flex items-center gap-1.5 text-xs md:text-sm text-muted-foreground">
+              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold">✓</span>
+              <span>Expert Verified</span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold">★</span>
-              <span>4.9/5 Rating (2,847 Reviews)</span>
+            <div className="flex items-center gap-1.5 text-xs md:text-sm text-muted-foreground">
+              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold">★</span>
+              <span>4.9/5 (2,847 Reviews)</span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold">🔒</span>
-              <span>Trusted Spiritual Resource</span>
+            <div className="flex items-center gap-1.5 text-xs md:text-sm text-muted-foreground">
+              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold">🔒</span>
+              <span>Trusted Resource</span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold">📖</span>
-              <span>100+ In-Depth Guides</span>
+            <div className="flex items-center gap-1.5 text-xs md:text-sm text-muted-foreground">
+              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold">📖</span>
+              <span>100+ Guides</span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold">🔮</span>
-              <span>Free Calculator Tool</span>
+            <div className="flex items-center gap-1.5 text-xs md:text-sm text-muted-foreground">
+              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold">🔮</span>
+              <span>Free Calculator</span>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Hero with integrated Calculator */}
-      <HeroSection />
 
       {/* Quick Reference Table */}
       <div className="container mx-auto px-4 py-8">
