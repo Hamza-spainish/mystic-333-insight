@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { blogPosts } from "@/data/blogPosts";
 
 const sortedPosts = [...blogPosts].sort(
-  (a, b) => new Date(b.dateModified).getTime() - new Date(a.dateModified).getTime()
+  (a, b) => new Date(a.dateModified).getTime() - new Date(b.dateModified).getTime()
 );
 
 const BlogsPage = () => {
