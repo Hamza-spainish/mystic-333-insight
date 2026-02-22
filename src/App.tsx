@@ -15,6 +15,19 @@ import { PrivacyPolicy, TermsAndConditions, Disclaimer, CookiePolicy, AffiliateD
 import AuthorPage from "./pages/AuthorPage";
 import NotFound from "./pages/NotFound";
 
+// Google Search Console verification - renders plain text without layout
+const GoogleVerification = () => {
+  // Hide header/footer and render only verification text
+  document.title = "google-site-verification: google247936339c711ead.html";
+  return (
+    <div style={{ position: "fixed", inset: 0, background: "white", zIndex: 9999, display: "flex", alignItems: "flex-start", padding: 0, margin: 0 }}>
+      <pre style={{ margin: 0, padding: 0, fontFamily: "monospace", fontSize: "14px" }}>
+        google-site-verification: google247936339c711ead.html
+      </pre>
+    </div>
+  );
+};
+
 const queryClient = new QueryClient();
 
 const ScrollToTop = () => {
@@ -39,6 +52,7 @@ const AnimatedRoutes = () => {
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/affiliate-disclosure" element={<AffiliateDisclosure />} />
           <Route path="/author" element={<AuthorPage />} />
+          <Route path="/google247936339c711ead.html" element={<GoogleVerification />} />
           <Route path="/:slug" element={<BlogPostPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
