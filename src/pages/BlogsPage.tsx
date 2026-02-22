@@ -62,7 +62,7 @@ const BlogsPage = () => {
               Angel Number Blog
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore our comprehensive guides on angel numbers, spiritual meanings, love, career and manifestation.
+              Explore our comprehensive guides on angel numbers, spiritual meanings, love, career and manifestation. {sortedPosts.length} in-depth articles to guide your journey.
             </p>
           </motion.div>
 
