@@ -40,9 +40,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/90 backdrop-blur-md shadow-card border-b border-border"
-          : "bg-transparent"
+        isScrolled ? "bg-background/90 backdrop-blur-md shadow-card border-b border-border" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -73,7 +71,7 @@ const Header = () => {
                 >
                   {link.label}
                 </Link>
-              )
+              ),
             )}
           </nav>
 
@@ -116,12 +114,13 @@ const Header = () => {
                   >
                     {link.label}
                   </Link>
-                )
+                ),
               )}
             </nav>
           </motion.div>
         )}
       </AnimatePresence>
+      <meta name="google-site-verification" content="eHidvbQ3QDAiXFLKG4ucdJeYKAJf7FCGN53WVicR2y4" />
     </header>
   );
 };
