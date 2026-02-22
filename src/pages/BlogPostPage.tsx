@@ -5,6 +5,7 @@ import { getPostBySlug } from "@/data/blogPosts";
 import AuthorBox from "@/components/AuthorBox";
 import AdPlaceholder from "@/components/AdPlaceholder";
 import NewsletterSection from "@/components/NewsletterSection";
+import SiloLinks from "@/components/SiloLinks";
 import type { BlogSection, TableData } from "@/data/blogPosts";
 
 const RenderTable = ({ table }: { table: TableData }) => (
@@ -201,6 +202,9 @@ const BlogPostPage = () => {
               </div>
             </section>
 
+            {/* Silo-based internal linking */}
+            <SiloLinks currentSlug={slug || ""} />
+
             {/* Internal linking CTA */}
             <div className="text-center p-8 bg-gradient-spiritual rounded-2xl shadow-spiritual mb-10">
               <h2 className="font-serif text-xl font-bold text-primary-foreground mb-2">
@@ -215,25 +219,6 @@ const BlogPostPage = () => {
               >
                 Explore 333 Meaning →
               </Link>
-            </div>
-
-            {/* Related posts */}
-            <div className="mb-10">
-              <h2 className="font-serif text-xl font-bold text-foreground mb-4">Related Angel Number Guides</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {[
-                  { slug: "angel-number-111", label: "Angel Number 111" },
-                  { slug: "angel-number-222", label: "Angel Number 222" },
-                  { slug: "angel-number-444", label: "Angel Number 444" },
-                  { slug: "angel-number-555", label: "Angel Number 555" },
-                  { slug: "angel-number-777", label: "Angel Number 777" },
-                  { slug: "angel-number-888", label: "Angel Number 888" },
-                ].filter(p => p.slug !== slug).slice(0, 4).map(p => (
-                  <Link key={p.slug} to={`/${p.slug}`} className="block p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all text-sm text-primary font-medium hover:underline">
-                    → {p.label} Meaning
-                  </Link>
-                ))}
-              </div>
             </div>
 
             <AuthorBox />

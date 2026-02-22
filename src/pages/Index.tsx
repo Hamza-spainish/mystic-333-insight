@@ -5,6 +5,8 @@ import AuthorBox from "@/components/AuthorBox";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import NewsletterSection from "@/components/NewsletterSection";
 import AdPlaceholder from "@/components/AdPlaceholder";
+import { numberSilos, topicSilos } from "@/data/siloStructure";
+import { allBlogPosts } from "@/data/blogPosts";
 
 const homepageSections = [
   { id: "what-is", title: "What Is Angel Number 333?", content: "Angel number 333 is a powerful divine message from the spiritual realm, carrying the amplified energy of the number 3 — which represents creativity, self-expression, communication, and spiritual growth. When this sacred number appears three times in sequence, its vibrational power is tripled, creating one of the most significant angel numbers in numerology.\n\nThe number 3 holds deep significance across spiritual traditions worldwide. In Christianity, it represents the Holy Trinity. In Hinduism, the Trimurti. In numerology, it symbolizes the union of mind, body, and spirit. When you see 333, you're receiving a direct communication from your guardian angels and ascended masters — enlightened spiritual beings like Jesus, Buddha, and Quan Yin who guide humanity from higher dimensions.\n\nAngel number 333 is not random. The universe doesn't communicate through coincidence. Every time you glance at a clock showing 3:33, notice 333 on a license plate, receive $3.33 in change, or encounter this number in any form, your angels are deliberately placing it in your awareness. They're saying: 'We are here. We see you. We support you. Pay attention to this moment.'" },
@@ -286,24 +288,52 @@ const Index = () => {
               </div>
             </section>
 
-            {/* Internal linking */}
+            {/* 333 Topic Silo Hub */}
             <div className="mb-12">
-              <h2 className="font-serif text-xl font-bold text-foreground mb-4">Explore Related Angel Number Guides</h2>
+              <h2 className="font-serif text-2xl font-bold text-foreground mb-2">333 Angel Number Deep Dives</h2>
+              <p className="text-muted-foreground text-sm mb-6">Explore every aspect of angel number 333 through our specialized topic guides.</p>
+              <div className="space-y-6">
+                {topicSilos.slice(0, 6).map(topic => {
+                  const topicPosts = allBlogPosts.filter(p => p.number === "333" && topic.keywords.some(k => p.slug.includes(k))).slice(0, 4);
+                  if (topicPosts.length === 0) return null;
+                  return (
+                    <div key={topic.id}>
+                      <h3 className="font-serif text-lg font-semibold text-foreground mb-3">{topic.emoji} 333 {topic.label}</h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {topicPosts.map(p => (
+                          <Link key={p.slug} to={`/${p.slug}`} className="block p-3 bg-card rounded-lg border border-border hover:shadow-card hover:border-primary/30 transition-all text-sm text-primary font-medium hover:underline">
+                            → {p.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Number Pillar Hub Links */}
+            <div className="mb-12">
+              <h2 className="font-serif text-2xl font-bold text-foreground mb-2">All Angel Number Guides</h2>
+              <p className="text-muted-foreground text-sm mb-6">Comprehensive pillar guides for every major angel number.</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {numberSilos.filter(s => s.id !== "333").map(s => (
+                  <Link key={s.pillarSlug} to={`/${s.pillarSlug}`} className="text-center p-4 bg-card rounded-xl border border-border hover:shadow-card hover:border-primary/30 transition-all group">
+                    <span className="block font-serif text-2xl font-bold text-primary mb-1 group-hover:scale-110 transition-transform">{s.id}</span>
+                    <span className="block text-xs text-muted-foreground">{s.description}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Topic Hub Pages */}
+            <div className="mb-12">
+              <h2 className="font-serif text-xl font-bold text-foreground mb-4">Angel Numbers by Topic</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {[
-                  { slug: "angel-number-111", label: "Angel Number 111 Meaning" },
-                  { slug: "angel-number-222", label: "Angel Number 222 Meaning" },
-                  { slug: "angel-number-444", label: "Angel Number 444 Meaning" },
-                  { slug: "angel-number-555", label: "Angel Number 555 Meaning" },
-                  { slug: "angel-number-777", label: "Angel Number 777 Meaning" },
-                  { slug: "angel-number-888", label: "Angel Number 888 Meaning" },
-                  { slug: "angel-number-999", label: "Angel Number 999 Meaning" },
-                  { slug: "angel-numbers-manifestation-guide", label: "Manifestation Guide" },
-                  { slug: "333-meaning-after-breakup", label: "333 After Breakup" },
-                  { slug: "333-meaning-in-career", label: "333 in Career" },
-                ].map(p => (
-                  <Link key={p.slug} to={`/${p.slug}`} className="block p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all text-sm text-primary font-medium hover:underline">
-                    → {p.label}
+                {topicSilos.filter(t => t.hubSlug).map(t => (
+                  <Link key={t.hubSlug} to={`/${t.hubSlug}`} className="flex items-center gap-3 p-3 bg-card rounded-lg border border-border hover:shadow-card hover:border-primary/30 transition-all">
+                    <span className="text-xl">{t.emoji}</span>
+                    <span className="text-sm text-primary font-medium hover:underline">{t.label} — All Numbers Guide</span>
                   </Link>
                 ))}
               </div>
