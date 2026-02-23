@@ -1,1 +1,4 @@
 project_id = "uddoxsquydqlwiiuafha"
+
+[functions.google-indexing]
+verify_jwt = false
