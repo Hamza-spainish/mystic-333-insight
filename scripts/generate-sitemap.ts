@@ -13,11 +13,15 @@ const staticPages = [
   { path: "/", priority: "1.0", changefreq: "weekly" },
   { path: "/blogs", priority: "0.9", changefreq: "weekly" },
   { path: "/author", priority: "0.7", changefreq: "monthly" },
+  { path: "/about-us", priority: "0.6", changefreq: "monthly" },
+  { path: "/contact-us", priority: "0.5", changefreq: "monthly" },
+  { path: "/adsense-policy", priority: "0.3", changefreq: "yearly" },
   { path: "/privacy-policy", priority: "0.3", changefreq: "yearly" },
   { path: "/terms-and-conditions", priority: "0.3", changefreq: "yearly" },
   { path: "/disclaimer", priority: "0.3", changefreq: "yearly" },
   { path: "/cookie-policy", priority: "0.3", changefreq: "yearly" },
   { path: "/affiliate-disclosure", priority: "0.3", changefreq: "yearly" },
+  { path: "/daniel-carter-numerology-education-spiritual-journey", priority: "0.7", changefreq: "monthly" },
 ];
 
 // Blog slugs - add new blog slugs here and re-run to update sitemap

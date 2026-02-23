@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ChevronRight, User, BookOpen, Award, Heart, Star } from "lucide-react";
 import NewsletterSection from "@/components/NewsletterSection";
-import { blogPosts } from "@/data/blogPosts";
+import { allBlogPosts } from "@/data/blogPosts";
 
 const AuthorPage = () => {
   const personSchema = {
@@ -47,7 +47,7 @@ const AuthorPage = () => {
     },
   };
 
-  const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.dateModified).getTime() - new Date(a.dateModified).getTime());
+  const sortedPosts = [...allBlogPosts].sort((a, b) => new Date(b.dateModified).getTime() - new Date(a.dateModified).getTime());
 
   return (
     <>
@@ -125,7 +125,7 @@ const AuthorPage = () => {
               <h2 className="font-serif text-2xl font-bold text-foreground mb-4">Expertise & Highlights</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { icon: BookOpen, title: "Published Author", desc: `${blogPosts.length}+ in-depth spiritual guides and articles` },
+                  { icon: BookOpen, title: "Published Author", desc: `${allBlogPosts.length}+ in-depth spiritual guides and articles` },
                   { icon: Award, title: "8+ Years Experience", desc: "Dedicated practice in angel number interpretation" },
                   { icon: Heart, title: "Thousands Guided", desc: "Helped individuals worldwide unlock spiritual potential" },
                   { icon: Star, title: "Cross-Cultural Study", desc: "Ancient numerological traditions from multiple cultures" },

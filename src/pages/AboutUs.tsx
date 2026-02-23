@@ -14,6 +14,30 @@ const AboutUs = () => {
         <meta property="og:url" content="https://www.theangelnumber333.com/about-us" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Angel Number 333 Meaning" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About Us – Angel Number 333",
+          "description": "Meet the team behind theangelnumber333.com. Our mission to provide trusted angel number meanings and spiritual numerology guides.",
+          "url": "https://www.theangelnumber333.com/about-us",
+          "isPartOf": { "@type": "WebSite", "name": "Angel Number 333 Meaning", "url": "https://www.theangelnumber333.com" }
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.theangelnumber333.com/" },
+            { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.theangelnumber333.com/about-us" }
+          ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Angel Number 333 Meaning",
+          "url": "https://www.theangelnumber333.com",
+          "description": "Trusted source for angel number meanings, spiritual numerology guides, and divine message interpretations.",
+          "founder": { "@type": "Person", "name": "Daniel Carter", "url": "https://www.theangelnumber333.com/author" }
+        })}</script>
       </Helmet>
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">
