@@ -42,6 +42,7 @@ export const topicSilos: TopicSilo[] = [
   { id: "spiritual", label: "Spiritual Growth", emoji: "✨", keywords: ["spiritual", "awakening", "numerology", "ascended", "master-number", "symbolism", "hidden-messages", "bible", "biblical", "astrology", "meditation", "mindfulness", "prayer", "chakra"], hubSlug: "how-to-interpret-angel-numbers" },
   { id: "life", label: "Life Changes", emoji: "🌟", keywords: ["life-transition", "feeling-stuck", "life-decision", "big-changes", "new-beginning", "life-purpose", "hard-times", "positive", "stress", "anxiety", "healing", "self-love", "inner-peace", "wellbeing", "personal-growth", "emotional"], hubSlug: "seeing-angel-numbers-everyday" },
   { id: "daily", label: "Daily Life & Fun", emoji: "🎯", keywords: ["daily-life", "how-to-respond", "journal", "social-media", "fun-facts", "meme", "popular-culture", "real-life", "dreams", "thinking-of-someone", "attract-positive", "energy", "messages-from-angels"], hubSlug: undefined },
+  { id: "numerology-study", label: "Numerology Study", emoji: "📚", keywords: ["numerology", "life-path", "expression-destiny", "soul-urge", "pythagorean", "chaldean", "kabbalistic", "vedic", "gematria", "sacred-geometry", "personal-year", "compatibility", "maturity-number", "pinnacle", "challenge-number", "karmic-debt", "house-number", "birthday-numerology", "master-numbers"], hubSlug: "what-is-numerology-complete-guide" },
 ];
 
 // ─── Helper Functions ────────────────────────────────────────
