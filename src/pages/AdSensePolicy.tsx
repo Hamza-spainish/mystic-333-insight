@@ -6,9 +6,14 @@ const AdSensePolicy = () => {
   return (
     <>
       <Helmet>
-        <title>AdSense Policy - Angel Number 333</title>
-        <meta name="description" content="Google AdSense policy for theangelnumber333.com. Learn how we display ads and comply with Google's advertising policies." />
+        <title>AdSense & Advertising Policy – Angel Number 333 | Ad Disclosure</title>
+        <meta name="description" content="Google AdSense and advertising policy for theangelnumber333.com. Understand how we use ads, cookies, and third-party services while providing angel number content." />
         <link rel="canonical" href="https://www.theangelnumber333.com/adsense-policy" />
+        <meta property="og:title" content="AdSense & Advertising Policy – Angel Number 333" />
+        <meta property="og:description" content="Google AdSense and advertising policy for theangelnumber333.com. How we use ads and cookies." />
+        <meta property="og:url" content="https://www.theangelnumber333.com/adsense-policy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Angel Number 333 Meaning" />
       </Helmet>
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">
