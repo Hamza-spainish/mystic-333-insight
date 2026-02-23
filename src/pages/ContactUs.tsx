@@ -17,9 +17,14 @@ const ContactUs = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Angel Number 333</title>
-        <meta name="description" content="Get in touch with theangelnumber333.com. Have a question about angel numbers or our content? We'd love to hear from you." />
+        <title>Contact Us – Angel Number 333 | Get Spiritual Guidance & Support</title>
+        <meta name="description" content="Contact theangelnumber333.com for questions about angel numbers, spiritual numerology, or our content. Reach our team for spiritual guidance and support." />
         <link rel="canonical" href="https://www.theangelnumber333.com/contact-us" />
+        <meta property="og:title" content="Contact Us – Angel Number 333 | Spiritual Guidance & Support" />
+        <meta property="og:description" content="Contact theangelnumber333.com for questions about angel numbers, spiritual numerology, or our content." />
+        <meta property="og:url" content="https://www.theangelnumber333.com/contact-us" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Angel Number 333 Meaning" />
       </Helmet>
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">

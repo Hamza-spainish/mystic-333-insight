@@ -6,9 +6,14 @@ const AboutUs = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - Angel Number 333</title>
-        <meta name="description" content="Learn about theangelnumber333.com — our mission, values, and the team behind your trusted source for angel number meanings and spiritual guidance." />
+        <title>About Us – Angel Number 333 | Our Mission & Spiritual Numerology Team</title>
+        <meta name="description" content="Meet the team behind theangelnumber333.com. Learn about our mission to provide trusted angel number meanings, spiritual numerology guides, and divine message interpretations." />
         <link rel="canonical" href="https://www.theangelnumber333.com/about-us" />
+        <meta property="og:title" content="About Us – Angel Number 333 | Our Mission & Team" />
+        <meta property="og:description" content="Meet the team behind theangelnumber333.com. Trusted angel number meanings, spiritual numerology guides, and divine message interpretations." />
+        <meta property="og:url" content="https://www.theangelnumber333.com/about-us" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Angel Number 333 Meaning" />
       </Helmet>
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">
