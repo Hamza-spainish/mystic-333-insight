@@ -13,6 +13,9 @@ import BlogsPage from "./pages/BlogsPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import { PrivacyPolicy, TermsAndConditions, Disclaimer, CookiePolicy, AffiliateDisclosure } from "./pages/LegalPages";
 import AuthorPage from "./pages/AuthorPage";
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
+import AdSensePolicy from "./pages/AdSensePolicy";
 import NotFound from "./pages/NotFound";
 
 // Google Search Console verification - renders plain text without layout
@@ -51,6 +54,9 @@ const AnimatedRoutes = () => {
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/affiliate-disclosure" element={<AffiliateDisclosure />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/adsense-policy" element={<AdSensePolicy />} />
           <Route path="/author" element={<AuthorPage />} />
           <Route path="/google247936339c711ead.html" element={<GoogleVerification />} />
           <Route path="/:slug" element={<BlogPostPage />} />

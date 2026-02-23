@@ -27,7 +27,9 @@ const Footer = () => {
 
   const siteLinks = [
     { label: "All Blog Posts", path: "/blogs" },
+    { label: "About Us", path: "/about-us" },
     { label: "About Daniel Carter", path: "/author" },
+    { label: "Contact Us", path: "/contact-us" },
   ];
 
   const legalLinks = [
@@ -36,6 +38,7 @@ const Footer = () => {
     { label: "Disclaimer", path: "/disclaimer" },
     { label: "Cookie Policy", path: "/cookie-policy" },
     { label: "Affiliate Disclosure", path: "/affiliate-disclosure" },
+    { label: "AdSense Policy", path: "/adsense-policy" },
   ];
 
   return (
