@@ -1066,8 +1066,9 @@ export const blogPosts: BlogPost[] = [
 
 import { extraBlogPosts } from "./extraBlogPosts";
 import { blogPosts333 } from "./blogPosts333";
+import { blogPostsNumerology } from "./blogPostsNumerology";
 
-export const allBlogPosts: BlogPost[] = [...blogPosts, ...extraBlogPosts, ...blogPosts333];
+export const allBlogPosts: BlogPost[] = [...blogPosts, ...extraBlogPosts, ...blogPosts333, ...blogPostsNumerology];
 
 export const getPostBySlug = (slug: string): BlogPost | undefined => {
   return allBlogPosts.find((post) => post.slug === slug);

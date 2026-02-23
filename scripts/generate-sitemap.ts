@@ -71,6 +71,22 @@ const blogSlugs = [
   "333-meditation-mindfulness", "333-attract-positive-energy", "333-fun-facts",
   "333-memes-spiritual-humor", "333-popular-culture-movies", "333-journal-ideas",
   "333-social-media-messages",
+  // Numerology study posts
+  "what-is-numerology-complete-guide", "life-path-number-meaning-guide",
+  "expression-destiny-number-meaning", "soul-urge-number-hearts-desire",
+  "pythagorean-vs-chaldean-numerology", "personal-year-number-numerology-cycles",
+  "numerology-compatibility-relationships", "numerology-birthday-number-meaning",
+  "master-numbers-11-22-33-meaning", "numerology-name-meaning-power",
+  "numerology-for-business-success", "karmic-debt-numbers-numerology",
+  "numerology-and-health-wellness", "numerology-house-number-meaning",
+  "numerology-career-guidance-best-jobs", "chinese-numerology-lucky-numbers",
+  "kabbalistic-numerology-gematria-guide", "vedic-numerology-indian-number-system",
+  "numerology-and-tarot-connection", "sacred-geometry-numbers-universe",
+  "numerology-moon-phases-cycles", "birthday-numerology-personality-traits",
+  "numerology-and-color-vibrations", "numerology-maturity-number-guide",
+  "how-to-do-numerology-reading", "numerology-and-meditation-practice",
+  "numerology-predictions-2026-guide", "numerology-personality-number-meaning",
+  "numerology-pinnacle-numbers-life-stages", "numerology-challenge-numbers-overcome",
 ];
 
 const today = new Date().toISOString().split("T")[0];
