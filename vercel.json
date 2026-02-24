@@ -34,6 +34,6 @@
     }
   ],
   "rewrites": [
-    { "source": "/((?!assets|sitemap\\.xml|robots\\.txt|favicon\\.ico|google247936339c711ead\\.html).*)", "destination": "/index.html" }
+    { "source": "/:path((?!.*\\..*).*)", "destination": "/" }
   ]
 }
