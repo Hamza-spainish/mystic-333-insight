@@ -30,6 +30,6 @@
     { "source": "/robots.txt", "destination": "/robots.txt" },
     { "source": "/favicon.ico", "destination": "/favicon.ico" },
     { "source": "/google247936339c711ead.html", "destination": "/google247936339c711ead.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/:path*", "destination": "/index.html" }
   ]
 }
