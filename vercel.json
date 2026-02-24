@@ -3,13 +3,21 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/:path(.*)",
+      "source": "/:path*",
       "has": [{ "type": "host", "value": "theangelnumber333.com" }],
-      "destination": "https://www.theangelnumber333.com/:path",
+      "destination": "https://www.theangelnumber333.com/:path*",
       "permanent": true
     }
   ],
   "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
     {
       "source": "/sitemap.xml",
       "headers": [
@@ -26,10 +34,6 @@
     }
   ],
   "rewrites": [
-    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
-    { "source": "/robots.txt", "destination": "/robots.txt" },
-    { "source": "/favicon.ico", "destination": "/favicon.ico" },
-    { "source": "/google247936339c711ead.html", "destination": "/google247936339c711ead.html" },
-    { "source": "/:path*", "destination": "/index.html" }
+    { "source": "/((?!assets|sitemap\\.xml|robots\\.txt|favicon\\.ico|google247936339c711ead\\.html).*)", "destination": "/index.html" }
   ]
 }
