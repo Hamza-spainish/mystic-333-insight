@@ -311,7 +311,7 @@ const Index = () => {
           <div className="max-w-3xl mx-auto">
             {homepageSections.map((section, i) => (
               <section key={section.id} id={section.id} className="mb-12">
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-5 heading-decorated flex items-center">
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-5 heading-decorated flex items-center gap-3">
                   <span className="section-badge">{i + 1}</span>
                   {section.title}
                 </h2>
