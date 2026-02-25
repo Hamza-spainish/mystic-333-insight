@@ -91,6 +91,8 @@ const blogSlugs = [
   "how-to-do-numerology-reading", "numerology-and-meditation-practice",
   "numerology-predictions-2026-guide", "numerology-personality-number-meaning",
   "numerology-pinnacle-numbers-life-stages", "numerology-challenge-numbers-overcome",
+  // High-volume keyword posts
+  "what-are-angel-numbers", "seeing-333-meaning", "angel-numbers-meaning-list",
 ];
 
 const today = new Date().toISOString().split("T")[0];
