@@ -7,7 +7,7 @@ const AdSensePolicy = () => {
     <>
       <Helmet>
         <title>AdSense & Advertising Policy – Angel Number 333 | Ad Disclosure</title>
-        <meta name="description" content="Google AdSense and advertising policy for theangelnumber333.com. Understand how we use ads, cookies, and third-party services while providing angel number content." />
+        <meta name="description" content="AdSense & advertising policy for theangelnumber333.com. How we use Google ads, cookies & third-party services. Full transparency on our ad practices." />
         <link rel="canonical" href="https://www.theangelnumber333.com/adsense-policy" />
         <meta property="og:title" content="AdSense & Advertising Policy – Angel Number 333" />
         <meta property="og:description" content="Google AdSense and advertising policy for theangelnumber333.com. How we use ads and cookies." />

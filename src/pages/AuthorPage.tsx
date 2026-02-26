@@ -53,7 +53,7 @@ const AuthorPage = () => {
     <>
       <Helmet>
         <title>Daniel Carter – Spiritual Numerology Expert | Angel Number 333</title>
-        <meta name="description" content="Meet Daniel Carter, spiritual numerology expert with 8+ years of experience in angel number interpretation, sacred geometry, and spiritual counseling." />
+        <meta name="description" content="Daniel Carter: spiritual numerology expert with 8+ years decoding angel numbers. Author of 190+ guides on 333, twin flames, love & manifestation. Read his story." />
         <link rel="canonical" href="https://www.theangelnumber333.com/author" />
         <meta property="og:title" content="Daniel Carter – Spiritual Numerology Expert" />
         <meta property="og:description" content="Meet Daniel Carter, spiritual numerology expert with 8+ years guiding thousands in understanding divine messages through numbers." />

@@ -7,7 +7,7 @@ const AboutUs = () => {
     <>
       <Helmet>
         <title>About Us – Angel Number 333 | Our Mission & Spiritual Numerology Team</title>
-        <meta name="description" content="Meet the team behind theangelnumber333.com. Learn about our mission to provide trusted angel number meanings, spiritual numerology guides, and divine message interpretations." />
+        <meta name="description" content="Meet the spiritual numerology experts behind theangelnumber333.com. Our mission: accurate angel number meanings, trusted numerology guides & free spiritual tools since 2025." />
         <link rel="canonical" href="https://www.theangelnumber333.com/about-us" />
         <meta property="og:title" content="About Us – Angel Number 333 | Our Mission & Team" />
         <meta property="og:description" content="Meet the team behind theangelnumber333.com. Trusted angel number meanings, spiritual numerology guides, and divine message interpretations." />

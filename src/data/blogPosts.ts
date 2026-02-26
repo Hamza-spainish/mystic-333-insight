@@ -1068,8 +1068,9 @@ import { extraBlogPosts } from "./extraBlogPosts";
 import { blogPosts333 } from "./blogPosts333";
 import { blogPostsNumerology } from "./blogPostsNumerology";
 import { blogPostsHighVolume } from "./blogPostsHighVolume";
+import { blogPostsLoveBreakup } from "./blogPostsLoveBreakup";
 
-export const allBlogPosts: BlogPost[] = [...blogPosts, ...extraBlogPosts, ...blogPosts333, ...blogPostsNumerology, ...blogPostsHighVolume];
+export const allBlogPosts: BlogPost[] = [...blogPosts, ...extraBlogPosts, ...blogPosts333, ...blogPostsNumerology, ...blogPostsHighVolume, ...blogPostsLoveBreakup];
 
 export const getPostBySlug = (slug: string): BlogPost | undefined => {
   return allBlogPosts.find((post) => post.slug === slug);
