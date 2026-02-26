@@ -38,7 +38,7 @@ const LegalLayout = ({ title, metaTitle, metaDescription, children }: LegalPageP
 };
 
 export const PrivacyPolicy = () => (
-  <LegalLayout title="Privacy Policy" metaTitle="Privacy Policy – Angel Number 333 | Data Protection & Your Rights" metaDescription="Read the privacy policy for theangelnumber333.com. Learn how we collect, use, and protect your personal data while you explore angel number meanings and spiritual guides.">
+  <LegalLayout title="Privacy Policy" metaTitle="Privacy Policy – Angel Number 333 | Data Protection & Your Rights" metaDescription="How theangelnumber333.com collects, uses & protects your data. GDPR compliant privacy policy covering cookies, analytics & your rights as a visitor.">
     <p>Last updated: February 22, 2026</p>
     <p>At theangelnumber333.com, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>
     <h2>Information We Collect</h2>
@@ -58,7 +58,7 @@ export const PrivacyPolicy = () => (
 );
 
 export const TermsAndConditions = () => (
-  <LegalLayout title="Terms & Conditions" metaTitle="Terms & Conditions – Angel Number 333 | Website Usage Terms" metaDescription="Terms and conditions for using theangelnumber333.com. Understand your rights and responsibilities when accessing our angel number guides and spiritual content.">
+  <LegalLayout title="Terms & Conditions" metaTitle="Terms & Conditions – Angel Number 333 | Website Usage Terms" metaDescription="Terms of use for theangelnumber333.com. Your rights, responsibilities & content usage guidelines for our angel number guides and spiritual resources.">
     <p>Last updated: February 22, 2026</p>
     <p>By accessing and using theangelnumber333.com, you accept and agree to be bound by these Terms and Conditions.</p>
     <h2>Use of Content</h2>
@@ -77,7 +77,7 @@ export const TermsAndConditions = () => (
 );
 
 export const Disclaimer = () => (
-  <LegalLayout title="Disclaimer" metaTitle="Disclaimer – Angel Number 333 | Spiritual Content Notice" metaDescription="Important disclaimer for theangelnumber333.com. Our angel number and numerology content is for informational purposes — not professional medical, financial, or legal advice.">
+  <LegalLayout title="Disclaimer" metaTitle="Disclaimer – Angel Number 333 | Spiritual Content Notice" metaDescription="Disclaimer for theangelnumber333.com: angel number & numerology content is for informational purposes only. Not a substitute for professional medical or financial advice.">
     <p>Last updated: February 22, 2026</p>
     <h2>General Disclaimer</h2>
     <p>The information provided on theangelnumber333.com is for general informational and entertainment purposes only. All content related to angel numbers, numerology, spirituality, and related topics represents personal interpretations and should not be taken as absolute truth or professional advice.</p>
@@ -93,7 +93,7 @@ export const Disclaimer = () => (
 );
 
 export const CookiePolicy = () => (
-  <LegalLayout title="Cookie Policy" metaTitle="Cookie Policy – Angel Number 333 | How We Use Cookies" metaDescription="Cookie policy for theangelnumber333.com. Learn how we use cookies, analytics, and advertising technologies on our angel number and spiritual numerology website.">
+  <LegalLayout title="Cookie Policy" metaTitle="Cookie Policy – Angel Number 333 | How We Use Cookies" metaDescription="How theangelnumber333.com uses cookies for analytics & personalized ads. Manage your cookie preferences and learn about GDPR-compliant consent options.">
     <p>Last updated: February 22, 2026</p>
     <p>This Cookie Policy explains how theangelnumber333.com uses cookies and similar tracking technologies.</p>
     <h2>What Are Cookies?</h2>
@@ -110,7 +110,7 @@ export const CookiePolicy = () => (
 );
 
 export const AffiliateDisclosure = () => (
-  <LegalLayout title="Affiliate Disclosure" metaTitle="Affiliate Disclosure – Angel Number 333 | FTC Compliance" metaDescription="Affiliate disclosure for theangelnumber333.com. We transparently disclose affiliate partnerships that help fund our free angel number guides and spiritual tools.">
+  <LegalLayout title="Affiliate Disclosure" metaTitle="Affiliate Disclosure – Angel Number 333 | FTC Compliance" metaDescription="FTC-compliant affiliate disclosure for theangelnumber333.com. How affiliate links support our free angel number guides, calculators & spiritual content.">
     <p>Last updated: February 22, 2026</p>
     <h2>FTC Disclosure</h2>
     <p>In accordance with the Federal Trade Commission (FTC) guidelines, theangelnumber333.com discloses that some of the links on this website are affiliate links. This means we may receive a commission if you click on these links and make a purchase, at no additional cost to you.</p>

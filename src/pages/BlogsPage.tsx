@@ -51,7 +51,7 @@ const BlogsPage = () => {
     <>
       <Helmet>
         <title>Angel Number Blog – Complete Guide to 111, 222, 333, 444, 555, Numerology & More (2026)</title>
-        <meta name="description" content="Explore 180+ angel number guides and numerology articles with spiritual meanings, love interpretations, twin flame signs, career guidance, and the study of numerology. Comprehensive guides on 111, 222, 333, 444, 555, 777, 888, 999, Life Path numbers and more." />
+        <meta name="description" content="Browse 190+ angel number guides: 111, 222, 333, 444, 555, 777, 888, 999 meanings for love, twin flame, career & money. Expert numerology articles updated for 2026." />
         <link rel="canonical" href="https://www.theangelnumber333.com/blogs" />
         <meta property="og:title" content="Angel Number Blog – Spiritual Guides & Meanings" />
         <meta property="og:description" content="Browse all angel number guides and spiritual numerology articles." />

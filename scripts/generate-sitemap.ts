@@ -93,6 +93,10 @@ const blogSlugs = [
   "numerology-pinnacle-numbers-life-stages", "numerology-challenge-numbers-overcome",
   // High-volume keyword posts
   "what-are-angel-numbers", "seeing-333-meaning", "angel-numbers-meaning-list",
+  // Love & Breakup posts
+  "angel-numbers-after-breakup-healing-guide", "angel-number-333-love-soulmate-signs",
+  "how-to-move-on-after-breakup-spiritual-guide", "angel-numbers-for-love-manifestation",
+  "seeing-angel-numbers-with-ex-meaning",
 ];
 
 const today = new Date().toISOString().split("T")[0];

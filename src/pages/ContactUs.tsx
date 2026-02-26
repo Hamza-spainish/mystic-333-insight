@@ -18,7 +18,7 @@ const ContactUs = () => {
     <>
       <Helmet>
         <title>Contact Us – Angel Number 333 | Get Spiritual Guidance & Support</title>
-        <meta name="description" content="Contact theangelnumber333.com for questions about angel numbers, spiritual numerology, or our content. Reach our team for spiritual guidance and support." />
+        <meta name="description" content="Have questions about angel numbers or numerology? Contact theangelnumber333.com for spiritual guidance, content inquiries, and partnership opportunities. Fast response." />
         <link rel="canonical" href="https://www.theangelnumber333.com/contact-us" />
         <meta property="og:title" content="Contact Us – Angel Number 333 | Spiritual Guidance & Support" />
         <meta property="og:description" content="Contact theangelnumber333.com for questions about angel numbers, spiritual numerology, or our content." />
