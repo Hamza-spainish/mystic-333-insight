@@ -97,6 +97,12 @@ const blogSlugs = [
   "angel-numbers-after-breakup-healing-guide", "angel-number-333-love-soulmate-signs",
   "how-to-move-on-after-breakup-spiritual-guide", "angel-numbers-for-love-manifestation",
   "seeing-angel-numbers-with-ex-meaning",
+  // New batch posts
+  "angel-number-303", "angel-number-404", "angel-number-505", "angel-number-606",
+  "angel-number-707", "angel-number-808", "angel-number-909", "angel-number-911",
+  "angel-number-717", "angel-number-818", "angel-number-919", "angel-number-1001",
+  "angel-number-1133", "angel-number-1144", "angel-number-1155", "angel-number-1221",
+  "angel-number-2112", "angel-number-2424", "angel-number-3131", "angel-number-321",
 ];
 
 const today = new Date().toISOString().split("T")[0];
