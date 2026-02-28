@@ -103,6 +103,14 @@ const blogSlugs = [
   "angel-number-717", "angel-number-818", "angel-number-919", "angel-number-1001",
   "angel-number-1133", "angel-number-1144", "angel-number-1155", "angel-number-1221",
   "angel-number-2112", "angel-number-2424", "angel-number-3131", "angel-number-321",
+  // Trending posts
+  "seeing-1111-everywhere-meaning", "222-meaning-pregnancy-fertility", "444-after-breakup-meaning",
+  "angel-numbers-on-clock-meaning", "why-do-i-keep-seeing-repeating-numbers",
+  "1010-angel-number-meaning", "1212-angel-number-twin-flame", "what-does-444-mean-spiritually",
+  "555-angel-number-meaning-change", "777-angel-number-luck-meaning", "888-angel-number-money-wealth",
+  "angel-number-meaning-in-hindi", "angel-numbers-for-money-manifestation", "angel-numbers-for-love-attraction",
+  "seeing-333-and-444-together", "angel-number-for-career-success", "angel-numbers-while-thinking-of-someone",
+  "angel-number-for-exam-success", "angel-number-for-pregnancy-baby", "angel-number-911-spiritual-emergency",
 ];
 
 const today = new Date().toISOString().split("T")[0];
