@@ -111,6 +111,17 @@ const blogSlugs = [
   "angel-number-meaning-in-hindi", "angel-numbers-for-money-manifestation", "angel-numbers-for-love-attraction",
   "seeing-333-and-444-together", "angel-number-for-career-success", "angel-numbers-while-thinking-of-someone",
   "angel-number-for-exam-success", "angel-number-for-pregnancy-baby", "angel-number-911-spiritual-emergency",
+  // Info batch posts
+  "angel-number-meaning-chart-complete", "how-to-calculate-life-path-number",
+  "angel-numbers-and-sleep-dreams-guide", "angel-numbers-and-pregnancy-fertility-guide",
+  "angel-numbers-and-manifestation-law-of-attraction", "angel-numbers-by-day-of-week-meaning",
+  "angel-numbers-and-chakra-healing-guide", "angel-numbers-and-moon-phases-guide",
+  "angel-numbers-and-crystals-gemstones-guide", "angel-numbers-and-zodiac-signs-compatibility",
+  "angel-numbers-for-students-exam-success", "angel-numbers-for-new-beginnings-fresh-start",
+  "angel-numbers-and-meditation-prayer-guide", "angel-numbers-and-health-wellness-body",
+  "angel-numbers-and-money-wealth-abundance", "angel-numbers-and-twin-flame-stages",
+  "angel-numbers-and-gratitude-practice", "angel-numbers-warning-signs-caution",
+  "angel-numbers-and-pets-animals-signs", "angel-numbers-for-moving-new-home",
 ];
 
 const today = new Date().toISOString().split("T")[0];
