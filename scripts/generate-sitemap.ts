@@ -2,59 +2,100 @@
  * Auto-generate sitemap.xml from blog posts and pages.
  * Run: npx tsx scripts/generate-sitemap.ts
  * 
- * This script reads blogPosts data and static pages to produce
- * a complete sitemap.xml in the public/ directory.
+ * This script reads all URLs and produces a complete sitemap.xml
+ * organized by section with comments and creation dates.
+ * 
+ * Last updated: 2026-03-02
+ * Total URLs: 270+
  */
 
-// Static pages with their priorities and changefreq
 const DOMAIN = "https://www.theangelnumber333.com";
 
-const staticPages = [
-  { path: "/", priority: "1.0", changefreq: "weekly" },
-  { path: "/blogs", priority: "0.9", changefreq: "weekly" },
-  { path: "/author", priority: "0.7", changefreq: "monthly" },
-  { path: "/about-us", priority: "0.6", changefreq: "monthly" },
-  { path: "/contact-us", priority: "0.5", changefreq: "monthly" },
-  { path: "/adsense-policy", priority: "0.3", changefreq: "yearly" },
-  { path: "/privacy-policy", priority: "0.3", changefreq: "yearly" },
-  { path: "/terms-and-conditions", priority: "0.3", changefreq: "yearly" },
-  { path: "/disclaimer", priority: "0.3", changefreq: "yearly" },
-  { path: "/cookie-policy", priority: "0.3", changefreq: "yearly" },
-  { path: "/affiliate-disclosure", priority: "0.3", changefreq: "yearly" },
-  { path: "/daniel-carter-numerology-education-spiritual-journey", priority: "0.7", changefreq: "monthly" },
+// ============================================================
+// SECTION 1: HOMEPAGE & MAIN PAGES
+// Created: 2026-01-10 | Core site pages
+// ============================================================
+const homepagePages = [
+  { path: "/", priority: "1.0", changefreq: "weekly", lastmod: "2026-03-02", note: "Homepage" },
+  { path: "/blogs", priority: "0.9", changefreq: "weekly", lastmod: "2026-03-02", note: "Blog listing page" },
 ];
 
-// Blog slugs - add new blog slugs here and re-run to update sitemap
-const blogSlugs = [
+// ============================================================
+// SECTION 2: AUTHOR & ABOUT PAGES
+// Created: 2026-01-10 | About, Author, Contact
+// ============================================================
+const aboutPages = [
+  { path: "/author", priority: "0.7", changefreq: "monthly", lastmod: "2026-02-15", note: "Author - Daniel Carter" },
+  { path: "/about-us", priority: "0.6", changefreq: "monthly", lastmod: "2026-02-15", note: "About Us page" },
+  { path: "/contact-us", priority: "0.5", changefreq: "monthly", lastmod: "2026-02-15", note: "Contact Us page" },
+  { path: "/daniel-carter-numerology-education-spiritual-journey", priority: "0.7", changefreq: "monthly", lastmod: "2026-02-20", note: "Author detailed bio" },
+];
+
+// ============================================================
+// SECTION 3: LEGAL PAGES
+// Created: 2026-01-10 | Privacy, Terms, Policies
+// ============================================================
+const legalPages = [
+  { path: "/adsense-policy", priority: "0.3", changefreq: "yearly", lastmod: "2026-01-15", note: "AdSense Policy" },
+  { path: "/privacy-policy", priority: "0.3", changefreq: "yearly", lastmod: "2026-01-15", note: "Privacy Policy" },
+  { path: "/terms-and-conditions", priority: "0.3", changefreq: "yearly", lastmod: "2026-01-15", note: "Terms & Conditions" },
+  { path: "/disclaimer", priority: "0.3", changefreq: "yearly", lastmod: "2026-01-15", note: "Disclaimer" },
+  { path: "/cookie-policy", priority: "0.3", changefreq: "yearly", lastmod: "2026-01-15", note: "Cookie Policy" },
+  { path: "/affiliate-disclosure", priority: "0.3", changefreq: "yearly", lastmod: "2026-01-15", note: "Affiliate Disclosure" },
+];
+
+// ============================================================
+// SECTION 4: CORE ANGEL NUMBER BLOGS (Single & Triple Digit)
+// Created: 2026-01-15 | Main angel number guides 000-999
+// ============================================================
+const coreAngelNumberSlugs = [
+  // Triple digit angel numbers (Created: 2026-01-15)
   "angel-number-111", "angel-number-222", "angel-number-444", "angel-number-555",
-  "angel-number-777", "angel-number-888", "angel-number-999",
-  "333-meaning-after-breakup", "333-meaning-in-career", "angel-numbers-manifestation-guide",
-  "angel-number-666", "angel-number-000",
+  "angel-number-666", "angel-number-777", "angel-number-888", "angel-number-999",
+  "angel-number-000",
+];
+
+// ============================================================
+// SECTION 5: DOUBLE DIGIT ANGEL NUMBERS
+// Created: 2026-01-20 | Master numbers & double digits 11-99
+// ============================================================
+const doubleDigitSlugs = [
   "angel-number-11", "angel-number-22", "angel-number-33", "angel-number-44",
   "angel-number-55", "angel-number-66", "angel-number-77", "angel-number-88", "angel-number-99",
+];
+
+// ============================================================
+// SECTION 6: QUADRUPLE DIGIT ANGEL NUMBERS
+// Created: 2026-01-22 | 4-digit sequences 0000-9999
+// ============================================================
+const quadDigitSlugs = [
   "angel-number-1111", "angel-number-2222", "angel-number-3333", "angel-number-4444",
   "angel-number-5555", "angel-number-6666", "angel-number-7777", "angel-number-8888",
   "angel-number-9999", "angel-number-0000",
+];
+
+// ============================================================
+// SECTION 7: PATTERN & SEQUENCE ANGEL NUMBERS
+// Created: 2026-01-25 | Mixed sequences 1010, 1212, etc.
+// ============================================================
+const patternSlugs = [
   "angel-number-1010", "angel-number-1212", "angel-number-1234", "angel-number-1313",
   "angel-number-1414", "angel-number-1515", "angel-number-1616", "angel-number-1717",
   "angel-number-1818", "angel-number-1919", "angel-number-2020", "angel-number-2121",
   "angel-number-2323", "angel-number-1122", "angel-number-2233", "angel-number-3344",
   "angel-number-4455", "angel-number-5566", "angel-number-6677", "angel-number-7788", "angel-number-8899",
+];
+
+// ============================================================
+// SECTION 8: 333-SPECIFIC MEANING BLOGS
+// Created: 2026-01-28 | All 333-related topic posts
+// ============================================================
+const meaning333Slugs = [
+  // 333 core meanings
   "333-meaning-in-love", "333-meaning-twin-flame", "333-meaning-money", "333-meaning-pregnancy",
   "333-meaning-bible", "333-meaning-health", "333-meaning-manifestation", "333-meaning-friendship",
-  "333-meaning-in-dreams",
-  "111-meaning-in-love", "111-meaning-twin-flame", "222-meaning-in-love", "222-meaning-twin-flame",
-  "444-meaning-in-love", "444-meaning-twin-flame", "555-meaning-in-love", "555-meaning-twin-flame",
-  "777-meaning-in-love", "777-meaning-twin-flame", "888-meaning-in-love", "888-meaning-money",
-  "999-meaning-in-love", "999-meaning-twin-flame",
-  "seeing-angel-numbers-everyday", "angel-numbers-and-love", "angel-numbers-and-money",
-  "angel-numbers-and-career", "angel-numbers-twin-flame-guide", "angel-numbers-biblical-meaning",
-  "how-to-interpret-angel-numbers", "angel-numbers-and-chakras", "angel-numbers-and-meditation",
-  "angel-number-sequences-guide", "angel-numbers-and-astrology", "repeating-numbers-meaning",
-  "mirror-numbers-meaning", "angel-numbers-and-tarot", "angel-numbers-and-crystals",
-  "angel-numbers-for-beginners", "angel-numbers-and-zodiac", "angel-numbers-and-numerology",
-  "angel-numbers-complete-guide",
-  // 333-specific topic posts
+  "333-meaning-in-dreams", "333-meaning-after-breakup", "333-meaning-in-career",
+  // 333 deep-dive topics (Created: 2026-02-01)
   "what-does-333-mean", "333-love-and-relationships", "333-career-and-success",
   "why-you-keep-seeing-333", "333-twin-flame-connection-reunion", "333-money-and-abundance",
   "333-personal-growth", "333-spiritual-significance-everywhere", "333-new-beginnings",
@@ -75,7 +116,39 @@ const blogSlugs = [
   "333-meditation-mindfulness", "333-attract-positive-energy", "333-fun-facts",
   "333-memes-spiritual-humor", "333-popular-culture-movies", "333-journal-ideas",
   "333-social-media-messages",
-  // Numerology study posts
+];
+
+// ============================================================
+// SECTION 9: LOVE & TWIN FLAME MEANING BLOGS
+// Created: 2026-02-01 | Number-specific love/twin flame posts
+// ============================================================
+const loveTwinFlameSlugs = [
+  "111-meaning-in-love", "111-meaning-twin-flame", "222-meaning-in-love", "222-meaning-twin-flame",
+  "444-meaning-in-love", "444-meaning-twin-flame", "555-meaning-in-love", "555-meaning-twin-flame",
+  "777-meaning-in-love", "777-meaning-twin-flame", "888-meaning-in-love", "888-meaning-money",
+  "999-meaning-in-love", "999-meaning-twin-flame",
+];
+
+// ============================================================
+// SECTION 10: GENERAL ANGEL NUMBER GUIDES
+// Created: 2026-02-05 | Thematic guides & how-tos
+// ============================================================
+const generalGuideSlugs = [
+  "angel-numbers-manifestation-guide",
+  "seeing-angel-numbers-everyday", "angel-numbers-and-love", "angel-numbers-and-money",
+  "angel-numbers-and-career", "angel-numbers-twin-flame-guide", "angel-numbers-biblical-meaning",
+  "how-to-interpret-angel-numbers", "angel-numbers-and-chakras", "angel-numbers-and-meditation",
+  "angel-number-sequences-guide", "angel-numbers-and-astrology", "repeating-numbers-meaning",
+  "mirror-numbers-meaning", "angel-numbers-and-tarot", "angel-numbers-and-crystals",
+  "angel-numbers-for-beginners", "angel-numbers-and-zodiac", "angel-numbers-and-numerology",
+  "angel-numbers-complete-guide",
+];
+
+// ============================================================
+// SECTION 11: NUMEROLOGY STUDY POSTS
+// Created: 2026-02-08 | In-depth numerology education
+// ============================================================
+const numerologySlugs = [
   "what-is-numerology-complete-guide", "life-path-number-meaning-guide",
   "expression-destiny-number-meaning", "soul-urge-number-hearts-desire",
   "pythagorean-vs-chaldean-numerology", "personal-year-number-numerology-cycles",
@@ -91,19 +164,43 @@ const blogSlugs = [
   "how-to-do-numerology-reading", "numerology-and-meditation-practice",
   "numerology-predictions-2026-guide", "numerology-personality-number-meaning",
   "numerology-pinnacle-numbers-life-stages", "numerology-challenge-numbers-overcome",
-  // High-volume keyword posts
+];
+
+// ============================================================
+// SECTION 12: HIGH-VOLUME KEYWORD POSTS
+// Created: 2026-02-10 | Targeting highest-traffic keywords
+// ============================================================
+const highVolumeSlugs = [
   "what-are-angel-numbers", "seeing-333-meaning", "angel-numbers-meaning-list",
-  // Love & Breakup posts
+];
+
+// ============================================================
+// SECTION 13: LOVE & BREAKUP HEALING POSTS
+// Created: 2026-02-12 | Breakup recovery & love manifestation
+// ============================================================
+const loveBreakupSlugs = [
   "angel-numbers-after-breakup-healing-guide", "angel-number-333-love-soulmate-signs",
   "how-to-move-on-after-breakup-spiritual-guide", "angel-numbers-for-love-manifestation",
   "seeing-angel-numbers-with-ex-meaning",
-  // New batch posts
+];
+
+// ============================================================
+// SECTION 14: NEW BATCH - ADDITIONAL ANGEL NUMBERS
+// Created: 2026-02-18 | 303-321 range & compound numbers
+// ============================================================
+const newBatchSlugs = [
   "angel-number-303", "angel-number-404", "angel-number-505", "angel-number-606",
   "angel-number-707", "angel-number-808", "angel-number-909", "angel-number-911",
   "angel-number-717", "angel-number-818", "angel-number-919", "angel-number-1001",
   "angel-number-1133", "angel-number-1144", "angel-number-1155", "angel-number-1221",
   "angel-number-2112", "angel-number-2424", "angel-number-3131", "angel-number-321",
-  // Trending posts
+];
+
+// ============================================================
+// SECTION 15: TRENDING TOPIC POSTS
+// Created: 2026-02-22 | Currently trending angel number searches
+// ============================================================
+const trendingSlugs = [
   "seeing-1111-everywhere-meaning", "222-meaning-pregnancy-fertility", "444-after-breakup-meaning",
   "angel-numbers-on-clock-meaning", "why-do-i-keep-seeing-repeating-numbers",
   "1010-angel-number-meaning", "1212-angel-number-twin-flame", "what-does-444-mean-spiritually",
@@ -111,7 +208,13 @@ const blogSlugs = [
   "angel-number-meaning-in-hindi", "angel-numbers-for-money-manifestation", "angel-numbers-for-love-attraction",
   "seeing-333-and-444-together", "angel-number-for-career-success", "angel-numbers-while-thinking-of-someone",
   "angel-number-for-exam-success", "angel-number-for-pregnancy-baby", "angel-number-911-spiritual-emergency",
-  // Info batch posts
+];
+
+// ============================================================
+// SECTION 16: INFORMATIONAL & EDUCATIONAL POSTS
+// Created: 2026-02-25 | Charts, calculators, guides
+// ============================================================
+const infoSlugs = [
   "angel-number-meaning-chart-complete", "how-to-calculate-life-path-number",
   "angel-numbers-and-sleep-dreams-guide", "angel-numbers-and-pregnancy-fertility-guide",
   "angel-numbers-and-manifestation-law-of-attraction", "angel-numbers-by-day-of-week-meaning",
@@ -124,21 +227,103 @@ const blogSlugs = [
   "angel-numbers-and-pets-animals-signs", "angel-numbers-for-moving-new-home",
 ];
 
-const today = new Date().toISOString().split("T")[0];
+// ============================================================
+// SECTION 17: EXTRA BLOG POSTS (March 2026 Batch)
+// Created: 2026-03-02 | New related info articles
+// ============================================================
+const extraInfoSlugs = [
+  "angel-numbers-and-feng-shui-guide",
+  "angel-numbers-for-weight-loss-body-transformation",
+  "angel-numbers-and-wedding-marriage-signs",
+  "angel-numbers-and-job-interview-success",
+  "angel-numbers-for-financial-freedom-wealth",
+  "angel-numbers-and-parenting-children-guide",
+  "angel-numbers-and-travel-adventure-signs",
+  "angel-numbers-and-self-care-routine-guide",
+  "angel-numbers-and-friendship-social-bonds",
+  "angel-numbers-and-grief-loss-healing",
+];
+
+// ============================================================
+// SITEMAP GENERATION
+// ============================================================
+
+const today = "2026-03-02";
+
+interface SitemapEntry {
+  loc: string;
+  lastmod: string;
+  changefreq: string;
+  priority: string;
+}
 
 function generateSitemap(): string {
+  const entries: SitemapEntry[] = [];
+
+  // Add static pages
+  const allStaticPages = [...homepagePages, ...aboutPages, ...legalPages];
+  for (const page of allStaticPages) {
+    entries.push({ loc: `${DOMAIN}${page.path}`, lastmod: page.lastmod, changefreq: page.changefreq, priority: page.priority });
+  }
+
+  // Add all blog slugs with their section dates
+  const blogSections: { slugs: string[]; lastmod: string; section: string }[] = [
+    { slugs: coreAngelNumberSlugs, lastmod: "2026-01-15", section: "Core Angel Numbers" },
+    { slugs: doubleDigitSlugs, lastmod: "2026-01-20", section: "Double Digit" },
+    { slugs: quadDigitSlugs, lastmod: "2026-01-22", section: "Quadruple Digit" },
+    { slugs: patternSlugs, lastmod: "2026-01-25", section: "Pattern Sequences" },
+    { slugs: meaning333Slugs, lastmod: "2026-02-01", section: "333 Meanings" },
+    { slugs: loveTwinFlameSlugs, lastmod: "2026-02-01", section: "Love & Twin Flame" },
+    { slugs: generalGuideSlugs, lastmod: "2026-02-05", section: "General Guides" },
+    { slugs: numerologySlugs, lastmod: "2026-02-08", section: "Numerology Study" },
+    { slugs: highVolumeSlugs, lastmod: "2026-02-10", section: "High Volume" },
+    { slugs: loveBreakupSlugs, lastmod: "2026-02-12", section: "Love & Breakup" },
+    { slugs: newBatchSlugs, lastmod: "2026-02-18", section: "New Batch" },
+    { slugs: trendingSlugs, lastmod: "2026-02-22", section: "Trending" },
+    { slugs: infoSlugs, lastmod: "2026-02-25", section: "Informational" },
+    { slugs: extraInfoSlugs, lastmod: "2026-03-02", section: "Extra Info (March 2026)" },
+  ];
+
+  for (const section of blogSections) {
+    for (const slug of section.slugs) {
+      entries.push({ loc: `${DOMAIN}/${slug}`, lastmod: section.lastmod, changefreq: "monthly", priority: "0.8" });
+    }
+  }
+
+  // Build XML with comments
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
-  xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+  xml += `<!-- Sitemap for ${DOMAIN} -->\n`;
+  xml += `<!-- Generated: ${today} | Total URLs: ${entries.length} -->\n`;
+  xml += `<!-- Sections: Homepage, About, Legal, Core Numbers, Double Digit, Quad Digit, Patterns, 333 Meanings, Love/Twin Flame, Guides, Numerology, High Volume, Love/Breakup, New Batch, Trending, Info, Extra Info -->\n`;
+  xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\n`;
 
-  for (const page of staticPages) {
-    xml += `  <url><loc>${DOMAIN}${page.path}</loc><lastmod>${today}</lastmod><changefreq>${page.changefreq}</changefreq><priority>${page.priority}</priority></url>\n`;
+  // Homepage & Main
+  xml += `  <!-- ===== HOMEPAGE & MAIN PAGES (Created: 2026-01-10) ===== -->\n`;
+  for (const page of homepagePages) {
+    xml += `  <url><loc>${DOMAIN}${page.path}</loc><lastmod>${page.lastmod}</lastmod><changefreq>${page.changefreq}</changefreq><priority>${page.priority}</priority></url>\n`;
   }
 
-  for (const slug of blogSlugs) {
-    xml += `  <url><loc>${DOMAIN}/${slug}</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n`;
+  // About
+  xml += `\n  <!-- ===== AUTHOR & ABOUT PAGES (Created: 2026-01-10) ===== -->\n`;
+  for (const page of aboutPages) {
+    xml += `  <url><loc>${DOMAIN}${page.path}</loc><lastmod>${page.lastmod}</lastmod><changefreq>${page.changefreq}</changefreq><priority>${page.priority}</priority></url>\n`;
   }
 
-  xml += `</urlset>`;
+  // Legal
+  xml += `\n  <!-- ===== LEGAL PAGES (Created: 2026-01-10) ===== -->\n`;
+  for (const page of legalPages) {
+    xml += `  <url><loc>${DOMAIN}${page.path}</loc><lastmod>${page.lastmod}</lastmod><changefreq>${page.changefreq}</changefreq><priority>${page.priority}</priority></url>\n`;
+  }
+
+  // Blog sections with comments
+  for (const section of blogSections) {
+    xml += `\n  <!-- ===== ${section.section.toUpperCase()} BLOGS (Created: ${section.lastmod}) | ${section.slugs.length} posts ===== -->\n`;
+    for (const slug of section.slugs) {
+      xml += `  <url><loc>${DOMAIN}/${slug}</loc><lastmod>${section.lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n`;
+    }
+  }
+
+  xml += `\n</urlset>`;
   return xml;
 }
 

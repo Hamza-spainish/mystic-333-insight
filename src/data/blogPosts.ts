@@ -1072,8 +1072,9 @@ import { blogPostsLoveBreakup } from "./blogPostsLoveBreakup";
 import { blogPostsNewBatch } from "./blogPostsNewBatch";
 import { blogPostsTrending } from "./blogPostsTrending";
 import { blogPostsInfo } from "./blogPostsInfo";
+import { blogPostsExtra2 } from "./blogPostsExtra2";
 
-export const allBlogPosts: BlogPost[] = [...blogPosts, ...extraBlogPosts, ...blogPosts333, ...blogPostsNumerology, ...blogPostsHighVolume, ...blogPostsLoveBreakup, ...blogPostsNewBatch, ...blogPostsTrending, ...blogPostsInfo];
+export const allBlogPosts: BlogPost[] = [...blogPosts, ...extraBlogPosts, ...blogPosts333, ...blogPostsNumerology, ...blogPostsHighVolume, ...blogPostsLoveBreakup, ...blogPostsNewBatch, ...blogPostsTrending, ...blogPostsInfo, ...blogPostsExtra2];
 
 export const getPostBySlug = (slug: string): BlogPost | undefined => {
   return allBlogPosts.find((post) => post.slug === slug);
