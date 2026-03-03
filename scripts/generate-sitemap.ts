@@ -245,6 +245,15 @@ const extraInfoSlugs = [
 ];
 
 // ============================================================
+// SECTION 18: NEW INFO BLOG POSTS (March 2026 Batch 2)
+// Created: 2026-03-03 | Latest info articles
+// ============================================================
+const extraInfo2Slugs = [
+  "angel-numbers-and-retirement-planning-guide",
+  "angel-numbers-and-creativity-art-inspiration",
+];
+
+// ============================================================
 // SITEMAP GENERATION
 // ============================================================
 
@@ -282,6 +291,7 @@ function generateSitemap(): string {
     { slugs: trendingSlugs, lastmod: "2026-02-22", section: "Trending" },
     { slugs: infoSlugs, lastmod: "2026-02-25", section: "Informational" },
     { slugs: extraInfoSlugs, lastmod: "2026-03-02", section: "Extra Info (March 2026)" },
+    { slugs: extraInfo2Slugs, lastmod: "2026-03-03", section: "New Info (March 2026 Batch 2)" },
   ];
 
   for (const section of blogSections) {
