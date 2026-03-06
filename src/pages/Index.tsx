@@ -101,21 +101,28 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Angel Number 333 Meaning",
-    "url": "https://www.theangelnumber333.com",
+    "url": "https://www.theangelnumber333.com/",
     "description": "Your comprehensive guide to angel number 333 meaning, spiritual significance, love, twin flames, biblical symbolism and manifestation.",
-    "publisher": { "@type": "Organization", "name": "Angel Number 333 Meaning" },
+    "publisher": { "@type": "Organization", "name": "Angel Number 333 Meaning", "url": "https://www.theangelnumber333.com/" },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.theangelnumber333.com/blogs?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
   };
 
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism",
+    "headline": "Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism (2026)",
     "description": "Discover the powerful meaning of angel number 333. Learn about 333 spiritual meaning, love, twin flame connections, biblical symbolism, manifestation & why you keep seeing 333.",
     "author": { "@type": "Person", "name": "Daniel Carter", "jobTitle": "Spiritual Numerology Expert", "url": "https://www.theangelnumber333.com/author" },
-    "publisher": { "@type": "Organization", "name": "Angel Number 333 Meaning", "url": "https://www.theangelnumber333.com" },
+    "publisher": { "@type": "Organization", "name": "Angel Number 333 Meaning", "url": "https://www.theangelnumber333.com/", "logo": { "@type": "ImageObject", "url": "https://www.theangelnumber333.com/favicon.ico" } },
     "datePublished": "2026-01-10",
-    "dateModified": "2026-02-22",
+    "dateModified": "2026-03-06",
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.theangelnumber333.com/" },
+    "image": "https://www.theangelnumber333.com/favicon.ico",
+    "inLanguage": "en-US",
   };
 
   const faqSchema = {
@@ -190,7 +197,7 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Angel Number 333 Meaning",
-    "url": "https://www.theangelnumber333.com",
+    "url": "https://www.theangelnumber333.com/",
     "logo": "https://www.theangelnumber333.com/favicon.ico",
     "description": "Trusted spiritual numerology resource providing comprehensive angel number guides, calculators, and spiritual growth content.",
     "foundingDate": "2025",
@@ -201,17 +208,17 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism</title>
-        <meta name="description" content="What does 333 mean? Complete guide to angel number 333 meaning in love, twin flame, money, career & spirituality. Free calculator + expert interpretations for 2026." />
+        <title>Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism (2026)</title>
+        <meta name="description" content="What does 333 mean? Complete guide to angel number 333 meaning in love, twin flame, money, career & spirituality. Free calculator + expert interpretations updated March 2026." />
         <link rel="canonical" href="https://www.theangelnumber333.com/" />
-        <meta property="og:title" content="Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism" />
-        <meta property="og:description" content="Discover the powerful meaning of angel number 333. Spiritual guidance, love meanings, twin flame connections & biblical symbolism." />
+        <meta property="og:title" content="Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism (2026)" />
+        <meta property="og:description" content="Discover the powerful meaning of angel number 333. Spiritual guidance, love meanings, twin flame connections & biblical symbolism. Updated March 2026." />
         <meta property="og:url" content="https://www.theangelnumber333.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Angel Number 333 Meaning" />
+        <meta property="og:site_name" content="Angel Number 333 Meaning — www.theangelnumber333.com" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Angel Number 333 Meaning: Spiritual, Love & Twin Flame Symbolism" />
-        <meta name="twitter:description" content="Discover the powerful meaning of angel number 333." />
+        <meta name="twitter:title" content="Angel Number 333 Meaning: Spiritual, Love & Twin Flame Symbolism (2026)" />
+        <meta name="twitter:description" content="Discover the powerful meaning of angel number 333. Updated March 2026." />
         <script type="application/ld+json">{JSON.stringify(homepageSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
