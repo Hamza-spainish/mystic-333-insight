@@ -208,17 +208,17 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism</title>
-        <meta name="description" content="What does 333 mean? Complete guide to angel number 333 meaning in love, twin flame, money, career & spirituality. Free calculator + expert interpretations for 2026." />
+        <title>Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism (2026)</title>
+        <meta name="description" content="What does 333 mean? Complete guide to angel number 333 meaning in love, twin flame, money, career & spirituality. Free calculator + expert interpretations updated March 2026." />
         <link rel="canonical" href="https://www.theangelnumber333.com/" />
-        <meta property="og:title" content="Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism" />
-        <meta property="og:description" content="Discover the powerful meaning of angel number 333. Spiritual guidance, love meanings, twin flame connections & biblical symbolism." />
+        <meta property="og:title" content="Angel Number 333 Meaning: Spiritual, Love, Twin Flame & Biblical Symbolism (2026)" />
+        <meta property="og:description" content="Discover the powerful meaning of angel number 333. Spiritual guidance, love meanings, twin flame connections & biblical symbolism. Updated March 2026." />
         <meta property="og:url" content="https://www.theangelnumber333.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Angel Number 333 Meaning" />
+        <meta property="og:site_name" content="Angel Number 333 Meaning — www.theangelnumber333.com" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Angel Number 333 Meaning: Spiritual, Love & Twin Flame Symbolism" />
-        <meta name="twitter:description" content="Discover the powerful meaning of angel number 333." />
+        <meta name="twitter:title" content="Angel Number 333 Meaning: Spiritual, Love & Twin Flame Symbolism (2026)" />
+        <meta name="twitter:description" content="Discover the powerful meaning of angel number 333. Updated March 2026." />
         <script type="application/ld+json">{JSON.stringify(homepageSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
