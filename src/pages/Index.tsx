@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
+import AngelOracleGame from "@/components/AngelOracleGame";
 import AuthorBox from "@/components/AuthorBox";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import NewsletterSection from "@/components/NewsletterSection";
