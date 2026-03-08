@@ -199,6 +199,10 @@ const ALL_SLUGS: string[] = [
   "angel-numbers-and-pregnancy-fertility-signs", "angel-numbers-for-career-change-new-job",
   "angel-numbers-in-dreams-sleep-meaning", "angel-numbers-to-manifest-money-fast",
   "angel-numbers-and-zodiac-signs-astrology",
+  // Section 20: March 2026 Batch B
+  "angel-numbers-for-students-exam-success-guide", "angel-numbers-and-pets-animals-spiritual-signs",
+  "angel-numbers-for-weight-loss-body-transformation-guide", "angel-numbers-and-grief-loss-healing-guide",
+  "angel-numbers-for-travel-adventure-spiritual-guide",
 ];
 
 Deno.serve(async (req) => {
