@@ -83,6 +83,11 @@ const faqs = [
   { q: "Is seeing 333 a sign of spiritual awakening?", a: "Yes, 333 is one of the most common signs of spiritual awakening. It indicates your consciousness is expanding, your spiritual gifts are activating, and you're becoming more attuned to divine guidance." },
   { q: "What should I avoid when I see 333?", a: "Avoid negative thinking, self-doubt, and dismissing the sign as coincidence. 333 amplifies your current energy — so redirect any fear or worry toward positive intentions, gratitude, and creative expression." },
   { q: "What does 333 mean for friendships?", a: "For friendships, 333 signals joyful, creative connections and encourages you to surround yourself with people who uplift and inspire you. It may indicate new soul-aligned friendships entering your life." },
+  { q: "What is the best morning routine for 333 energy?", a: "Start with 3 minutes of gratitude, 3 minutes of 333 breath (inhale 3, hold 3, exhale 3 counts, 33 reps), 3 minutes of intention setting, and 3 minutes of movement. This 12-minute routine aligns your energy with the ascended masters." },
+  { q: "Can journaling help me connect with 333?", a: "Absolutely. Writing creates a bridge between conscious awareness and deeper soul wisdom. Journal during the 3:33 AM or 3:33 PM windows for maximum spiritual connection, using prompts about creative gifts, life alignment, and future self." },
+  { q: "What does 333 mean for family relationships?", a: "333 in family contexts signals creative nurturing, generational healing, and open communication. It encourages celebrating each family member's unique gifts and addresses healing patterns across three generations." },
+  { q: "How do I play the 333 oracle card game?", a: "Focus on a question, shuffle the cards, then intuitively pick 3 cards representing past, present, and future. Each card carries a divine message from the ascended masters that forms your personalized 333 reading." },
+  { q: "What does 333 mean for daily routines?", a: "333 encourages structuring your daily practices in groups of three — three affirmations, three breaths, three intentions. This trinity alignment amplifies the ascended master frequency in your everyday life." },
 ];
 
 const quickRefTable = {
