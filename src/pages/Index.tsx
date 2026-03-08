@@ -232,6 +232,9 @@ const Index = () => {
       {/* Hero with integrated Calculator */}
       <HeroSection />
 
+      {/* Interactive Oracle Card Game */}
+      <AngelOracleGame />
+
       {/* Verification Badges */}
       <div className="bg-secondary/30 border-y border-border py-3">
         <div className="container mx-auto px-4">
