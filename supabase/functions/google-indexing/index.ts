@@ -203,6 +203,10 @@ const ALL_SLUGS: string[] = [
   "angel-numbers-for-students-exam-success-guide", "angel-numbers-and-pets-animals-spiritual-signs",
   "angel-numbers-for-weight-loss-body-transformation-guide", "angel-numbers-and-grief-loss-healing-guide",
   "angel-numbers-for-travel-adventure-spiritual-guide",
+  // Section 21: March 2026 Batch C
+  "angel-numbers-for-confidence-self-esteem", "angel-numbers-and-birthday-meaning-guide",
+  "angel-numbers-for-forgiveness-letting-go", "angel-numbers-and-spiritual-protection-guide",
+  "angel-numbers-and-house-moving-new-home-guide",
 ];
 
 Deno.serve(async (req) => {
