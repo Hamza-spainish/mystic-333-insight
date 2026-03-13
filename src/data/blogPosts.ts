@@ -1078,8 +1078,9 @@ import { blogPostsMarch2026 } from "./blogPostsMarch2026";
 import { blogPostsMarch2026B } from "./blogPostsMarch2026B";
 import { blogPostsMarch2026C } from "./blogPostsMarch2026C";
 import { blogPostsMarch2026D } from "./blogPostsMarch2026D";
+import { blogPostsMarch2026E } from "./blogPostsMarch2026E";
 
-export const allBlogPosts: BlogPost[] = [...blogPosts, ...extraBlogPosts, ...blogPosts333, ...blogPostsNumerology, ...blogPostsHighVolume, ...blogPostsLoveBreakup, ...blogPostsNewBatch, ...blogPostsTrending, ...blogPostsInfo, ...blogPostsExtra2, ...blogPostsExtra3, ...blogPostsMarch2026, ...blogPostsMarch2026B, ...blogPostsMarch2026C, ...blogPostsMarch2026D];
+export const allBlogPosts: BlogPost[] = [...blogPosts, ...extraBlogPosts, ...blogPosts333, ...blogPostsNumerology, ...blogPostsHighVolume, ...blogPostsLoveBreakup, ...blogPostsNewBatch, ...blogPostsTrending, ...blogPostsInfo, ...blogPostsExtra2, ...blogPostsExtra3, ...blogPostsMarch2026, ...blogPostsMarch2026B, ...blogPostsMarch2026C, ...blogPostsMarch2026D, ...blogPostsMarch2026E];
 
 export const getPostBySlug = (slug: string): BlogPost | undefined => {
   return allBlogPosts.find((post) => post.slug === slug);
