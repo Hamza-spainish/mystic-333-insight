@@ -207,6 +207,10 @@ const ALL_SLUGS: string[] = [
   "angel-numbers-for-confidence-self-esteem", "angel-numbers-and-birthday-meaning-guide",
   "angel-numbers-for-forgiveness-letting-go", "angel-numbers-and-spiritual-protection-guide",
   "angel-numbers-and-house-moving-new-home-guide",
+  // Section 28: Bible Verses High-Volume
+  "psalm-23-meaning-the-lord-is-my-shepherd", "jeremiah-29-11-meaning-plans-to-prosper-you",
+  "philippians-4-13-meaning-i-can-do-all-things", "romans-8-28-meaning-all-things-work-together",
+  "proverbs-3-5-6-meaning-trust-in-the-lord",
 ];
 
 Deno.serve(async (req) => {
