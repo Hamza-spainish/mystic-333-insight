@@ -433,6 +433,72 @@ const Index = () => {
               </div>
             </div>
 
+            {/* Popular Angel Number Searches */}
+            <div className="mb-12">
+              <h2 className="font-serif text-2xl font-bold text-foreground mb-2 heading-decorated">Most Searched Angel Numbers</h2>
+              <p className="text-muted-foreground text-sm mb-6 mt-4">Explore the most popular angel number searches and discover their spiritual meanings.</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {[
+                  { slug: "seeing-1111-everywhere-meaning", label: "1111 Meaning", desc: "New beginnings & manifestation" },
+                  { slug: "seeing-333-meaning", label: "Seeing 333", desc: "Why you keep seeing 333" },
+                  { slug: "what-does-444-mean-spiritually", label: "444 Spiritual", desc: "Protection & stability" },
+                  { slug: "555-angel-number-meaning-change", label: "555 Change", desc: "Major life transitions" },
+                  { slug: "777-angel-number-luck-meaning", label: "777 Luck", desc: "Divine luck & wisdom" },
+                  { slug: "888-angel-number-money-wealth", label: "888 Wealth", desc: "Financial abundance" },
+                  { slug: "1010-angel-number-meaning", label: "1010 Meaning", desc: "Spiritual awakening" },
+                  { slug: "1212-angel-number-twin-flame", label: "1212 Twin Flame", desc: "Divine partnership" },
+                  { slug: "angel-number-911-spiritual-emergency", label: "911 Spiritual", desc: "Urgent divine message" },
+                ].map(item => (
+                  <Link key={item.slug} to={`/${item.slug}`} className="p-3 bg-card rounded-lg border border-border hover:shadow-card hover:border-primary/30 transition-all text-center">
+                    <span className="block font-serif font-bold text-primary text-lg">{item.label}</span>
+                    <span className="block text-xs text-muted-foreground mt-1">{item.desc}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Bible Verses & Spirituality Hub */}
+            <div className="mb-12">
+              <h2 className="font-serif text-2xl font-bold text-foreground mb-2 heading-decorated">📖 Popular Bible Verses & Spiritual Guides</h2>
+              <p className="text-muted-foreground text-sm mb-6 mt-4">Discover the spiritual meaning behind the most-read Bible verses and how they connect to angel numbers and divine guidance.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  { slug: "psalm-23-meaning-the-lord-is-my-shepherd", label: "Psalm 23 — The Lord Is My Shepherd" },
+                  { slug: "jeremiah-29-11-meaning-plans-to-prosper-you", label: "Jeremiah 29:11 — Plans to Prosper You" },
+                  { slug: "philippians-4-13-meaning-i-can-do-all-things", label: "Philippians 4:13 — I Can Do All Things" },
+                  { slug: "romans-8-28-meaning-all-things-work-together", label: "Romans 8:28 — All Things Work Together" },
+                  { slug: "proverbs-3-5-6-meaning-trust-in-the-lord", label: "Proverbs 3:5-6 — Trust in the Lord" },
+                  { slug: "333-meaning-bible", label: "333 Biblical Meaning — Complete Guide" },
+                  { slug: "333-bible-references", label: "333 Bible References & Verses" },
+                  { slug: "angel-numbers-biblical-meaning", label: "Angel Numbers Biblical Meaning" },
+                ].map(item => (
+                  <Link key={item.slug} to={`/${item.slug}`} className="block p-3 bg-card rounded-lg border border-border hover:shadow-card hover:border-primary/30 transition-all text-sm text-primary font-medium hover:underline">
+                    📖 {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Numerology & Learning Hub */}
+            <div className="mb-12">
+              <h2 className="font-serif text-2xl font-bold text-foreground mb-2 heading-decorated">🔢 Numerology Learning Center</h2>
+              <p className="text-muted-foreground text-sm mb-6 mt-4">Master the ancient science of numbers with our comprehensive numerology guides and resources.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  { slug: "what-is-numerology-complete-guide", label: "What Is Numerology? Complete Guide" },
+                  { slug: "life-path-number-meaning-guide", label: "Life Path Number Meaning" },
+                  { slug: "how-to-calculate-life-path-number", label: "How to Calculate Life Path Number" },
+                  { slug: "master-numbers-11-22-33-meaning", label: "Master Numbers 11, 22, 33 Meaning" },
+                  { slug: "numerology-compatibility-relationships", label: "Numerology Compatibility Guide" },
+                  { slug: "numerology-predictions-2026-guide", label: "Numerology Predictions 2026" },
+                ].map(item => (
+                  <Link key={item.slug} to={`/${item.slug}`} className="block p-3 bg-card rounded-lg border border-border hover:shadow-card hover:border-primary/30 transition-all text-sm text-primary font-medium hover:underline">
+                    🔢 {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             {/* CTA */}
             <div className="text-center p-8 bg-gradient-spiritual rounded-2xl shadow-spiritual">
               <h2 className="font-serif text-2xl font-bold text-primary-foreground mb-3">
