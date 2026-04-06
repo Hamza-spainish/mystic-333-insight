@@ -1086,8 +1086,9 @@ import { blogPostsHighVolume2 } from "./blogPostsHighVolume2";
 import { blogPostsBible3 } from "./blogPostsBible3";
 import { blogPostsBible4 } from "./blogPostsBible4";
 import { blogPostsBible5 } from "./blogPostsBible5";
+import { blogPostsBible6 } from "./blogPostsBible6";
 
-export const allBlogPosts: BlogPost[] = [...blogPosts, ...extraBlogPosts, ...blogPosts333, ...blogPostsNumerology, ...blogPostsHighVolume, ...blogPostsLoveBreakup, ...blogPostsNewBatch, ...blogPostsTrending, ...blogPostsInfo, ...blogPostsExtra2, ...blogPostsExtra3, ...blogPostsMarch2026, ...blogPostsMarch2026B, ...blogPostsMarch2026C, ...blogPostsMarch2026D, ...blogPostsMarch2026E, ...blogPostsMarch2026F, ...blogPostsBible, ...blogPostsBible2, ...blogPostsHighVolume2, ...blogPostsBible3, ...blogPostsBible4, ...blogPostsBible5];
+export const allBlogPosts: BlogPost[] = [...blogPosts, ...extraBlogPosts, ...blogPosts333, ...blogPostsNumerology, ...blogPostsHighVolume, ...blogPostsLoveBreakup, ...blogPostsNewBatch, ...blogPostsTrending, ...blogPostsInfo, ...blogPostsExtra2, ...blogPostsExtra3, ...blogPostsMarch2026, ...blogPostsMarch2026B, ...blogPostsMarch2026C, ...blogPostsMarch2026D, ...blogPostsMarch2026E, ...blogPostsMarch2026F, ...blogPostsBible, ...blogPostsBible2, ...blogPostsHighVolume2, ...blogPostsBible3, ...blogPostsBible4, ...blogPostsBible5, ...blogPostsBible6];
 
 export const getPostBySlug = (slug: string): BlogPost | undefined => {
   return allBlogPosts.find((post) => post.slug === slug);
