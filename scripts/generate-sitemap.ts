@@ -254,6 +254,18 @@ const extraInfo2Slugs = [
 ];
 
 // ============================================================
+// SECTION 19: BIBLE VERSE ARTICLES (April 2026)
+// Created: 2026-04-06 | High-volume Bible verse content for USA audience
+// ============================================================
+const bible6Slugs = [
+  "matthew-11-28-meaning-come-to-me-all-who-are-weary",
+  "isaiah-41-10-meaning-fear-not-for-i-am-with-you",
+  "2-timothy-1-7-meaning-god-has-not-given-us-spirit-of-fear",
+  "psalm-91-meaning-shelter-of-the-most-high-protection",
+  "matthew-6-33-34-meaning-seek-first-kingdom-do-not-worry",
+];
+
+// ============================================================
 // SITEMAP GENERATION
 // ============================================================
 
